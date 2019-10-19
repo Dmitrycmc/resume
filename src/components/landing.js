@@ -1,15 +1,10 @@
 import React from 'react';
-import background1 from '../assets/images/background1.jpeg';
-import styled from 'styled-components/macro';
+import FaceBlock from "./face-block";
+import AboutBlock from "./about-block";
 
-const Container = styled.div`
-    background-image: url(${background1});
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-`;
-
-
-const Landing = () => <Container />;
+const Landing = () => (<div>
+    <FaceBlock />
+    <AboutBlock />
+</div>);
 
 export default Landing;
