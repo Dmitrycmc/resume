@@ -1,5 +1,14 @@
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled, { keyframes } from 'styled-components/macro';
+
+const animation = keyframes`
+from {
+    top: -40px;
+}
+to {
+    top: 0px;
+}
+`;
 
 const Container = styled.ul`
     position: fixed;
@@ -16,11 +25,16 @@ const Container = styled.ul`
     color: white;
 
     list-style: none;
+
+    animation-name: ${animation};
+    animation-duration: 2s;
 `;
 
 const MenuItem = styled.li`
     margin: 0 20px;
+
     cursor: pointer;
+
     user-select: none;
 `;
 
