@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components/macro';
+import background1 from '../assets/images/background1.jpg';
 
 const animation = keyframes`
 from {
@@ -14,8 +15,8 @@ const Container = styled.ul`
     position: fixed;
 
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
     box-sizing: border-box;
     width: 100%;
     height: 40px;
@@ -26,13 +27,22 @@ const Container = styled.ul`
 
     list-style: none;
 
+    background-image: url(${background1});
+    background-size: cover;
+    background-attachment: fixed;
+    
+    z-index: 10;
+`;
+
+const Content = styled.div`
+position: relative;
     animation-name: ${animation};
-    animation-duration: 2s;
+    animation-duration: 2s;   
 `;
 
 const MenuItem = styled.li`
     margin: 0 20px;
-
+display: inline;
     cursor: pointer;
 
     user-select: none;
@@ -40,12 +50,14 @@ const MenuItem = styled.li`
 
 const Navigation = () => (
     <Container>
+            <Content>
         <MenuItem>Старт</MenuItem>
         <MenuItem>Обо мне</MenuItem>
         <MenuItem>Навыки</MenuItem>
         <MenuItem>Образование и опыт</MenuItem>
         <MenuItem>Примеры</MenuItem>
         <MenuItem>Контакты</MenuItem>
+            </Content>
     </Container>
 );
 
