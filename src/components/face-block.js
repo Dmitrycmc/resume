@@ -1,26 +1,31 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components/macro';
-import background1 from "../assets/images/background1.jpg";
+import background1 from '../assets/images/background1.jpg';
 
 const Container = styled.div`
-    background-image: url(${background1});
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
+    height: 100vh;
+
+    background-image: url(${background1});
+    background-size: cover;
+    background-attachment: fixed;
 `;
 
 const Title = styled.div`
-    font-size: 5em;
-    font-family: "Arial Black";
-    color: white;
-    text-transform: uppercase;
     width: 500px;
     margin: 20%;
+
+    color: white;
+    font-size: 5em;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
 `;
 
-const FaceBlock = () => <Container><Title>Middle Frontend Developer</Title></Container>;
+const FaceBlock = () => (
+    <Container>
+        <Title>Middle Frontend Developer</Title>
+    </Container>
+);
 
-    export default FaceBlock;
+export default FaceBlock;
