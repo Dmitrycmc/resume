@@ -1,5 +1,5 @@
 import React from 'react';
-import FaceBlock from './face-block';
+import FaceBlock from './face-block/face-block';
 import AboutBlock from './about-block';
 import Navigation from './navigation';
 import styled from 'styled-components/macro';
