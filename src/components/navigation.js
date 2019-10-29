@@ -32,7 +32,7 @@ const MenuItem = styled.li`
     display: inline;
     margin: 0 20px;
 
-    font-size: 14px;
+    font-size: 20px;
     font-family: Opensans, sans-serif;
     text-transform: uppercase;
 
