@@ -32,9 +32,11 @@ const Wrapper = styled.div`
     border: 2px solid white;
 
     background-color: rgb(0, 0, 0, 0.2);
+    opacity: 0;
 
     animation-name: ${fadeIn};
-    animation-duration: 2s;
+    animation-duration: 1800ms;
+    animation-delay: 200ms;
     animation-fill-mode: forwards;
 `;
 

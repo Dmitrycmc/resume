@@ -1,9 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 
 const Container = styled.div`
     position: relative;
-    left: ${props => props.left}px;
 
     width: fit-content;
 
@@ -19,12 +18,13 @@ const Container = styled.div`
 `;
 
 const Title = props => {
-    const ref = useRef();
+    const [offset, setOffset] = useState(0);
+    const [visible, setVisible] = useState(false);
 
-    const show = () => (ref.current.style.opacity = 1);
+    const show = () => setVisible(true);
 
     const onScroll = () => {
-        ref.current.style.left = props.left + props.leftSpeed * window.pageYOffset + 'px';
+        setOffset(window.pageYOffset);
     };
 
     useEffect(() => {
@@ -35,7 +35,12 @@ const Title = props => {
         };
     }, []);
 
-    return <Container ref={ref} {...props} />;
+    return (
+        <Container
+            style={{ left: props.left + props.leftSpeed * offset + 'px', opacity: visible ? 1 : 0 }}
+            {...props}
+        />
+    );
 };
 
 export default Title;
