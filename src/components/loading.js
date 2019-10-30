@@ -14,6 +14,8 @@ const Wrapper = styled.div`
     text-transform: uppercase;
 
     background: black;
+
+    user-select: none;
 `;
 
 const Loading = () => <Wrapper>Loading</Wrapper>;

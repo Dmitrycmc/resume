@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components/macro';
+import { keyframes } from 'styled-components/macro';
 
+const fadeIn = keyframes`
+    to {
+        top: 0;
+    }
+`;
 const backgroundCss = css`
     background-color: rgba(23, 25, 28, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -8,6 +14,7 @@ const backgroundCss = css`
 
 const Container = styled.ul`
     position: fixed;
+    top: -70px;
 
     display: flex;
     justify-content: flex-end;
@@ -23,6 +30,11 @@ const Container = styled.ul`
     list-style: none;
 
     transition: background-color 0.5s, box-shadow 0.5s;
+
+    animation-name: ${fadeIn};
+    animation-duration: 1800ms;
+    animation-delay: 200ms;
+    animation-fill-mode: forwards;
 
     z-index: 50;
     ${props => (props.background ? backgroundCss : '')}
