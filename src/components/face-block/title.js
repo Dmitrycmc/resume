@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
+import { getFadeInCss } from '../../helpers/keyframes';
 
 const Container = styled.div`
     position: relative;
@@ -15,32 +16,25 @@ const Container = styled.div`
     opacity: 0;
 
     transition: opacity 1s;
+
+    ${props => getFadeInCss('opacity: 0;', 'opacity: 1;', 1000, props.order * 300 + 1900)}
 `;
 
 const Title = props => {
     const [offset, setOffset] = useState(0);
-    const [visible, setVisible] = useState(false);
-
-    const show = () => setVisible(true);
 
     const onScroll = () => {
         setOffset(window.pageYOffset);
     };
 
     useEffect(() => {
-        setTimeout(show, props.order * 500);
         document.addEventListener('scroll', onScroll);
         return () => {
             document.removeEventListener('scroll', onScroll);
         };
     }, []);
 
-    return (
-        <Container
-            style={{ left: props.left + props.leftSpeed * offset + 'px', opacity: visible ? 1 : 0 }}
-            {...props}
-        />
-    );
+    return <Container style={{ left: props.left + props.leftSpeed * offset + 'px' }} {...props} />;
 };
 
 export default Title;

@@ -24,17 +24,17 @@ const Wrapper = styled.div`
 
     border: 2px solid white;
 
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: rgb(0, 0, 0, 0.5);
 
-    ${getFadeInCss('opacity: 0;', 'opacity: 1;', 1800, 500)}
+    ${props => getFadeInCss('opacity: 0;', 'opacity: 1;', props.scenario.TITLE_FADE_IN, props.scenario.TITLE_DELAY)}
 `;
 
-const FaceBlock = () => (
+const FaceBlock = ({ scenario }) => (
     <div style={{ position: 'relative' }}>
         <TopGradient color="black" height="500px" />
         <BottomGradient color="white" height="100px" />
         <Container>
-            <Wrapper>
+            <Wrapper scenario={scenario}>
                 <Title order={1} left={0} leftSpeed={-1}>
                     Middle
                 </Title>

@@ -6,20 +6,27 @@ import styled from 'styled-components/macro';
 import { getFadeInCss } from '../helpers/keyframes';
 import Loading from './loading';
 
+const scenario = {
+    FACE_BLOCK_DELAY: 500,
+    FACE_BLOCK_FADE_IN: 1800,
+    TITLE_DELAY: 1800,
+    TITLE_FADE_IN: 500
+};
+
 const Container = styled.div`
     position: absolute;
 
     width: 100%;
 
-    ${getFadeInCss('top: 100vh;', 'top: 0;', 1800, 500)}
+    ${getFadeInCss('top: 100vh;', 'top: 0;', scenario.FACE_BLOCK_FADE_IN, scenario.FACE_BLOCK_DELAY)}
 `;
 
 const Landing = () => (
     <>
-        <Navigation />
+        <Navigation scenario={scenario} />
         <Loading />
         <Container>
-            <FaceBlock />
+            <FaceBlock scenario={scenario} />
             <AboutBlock />
         </Container>
     </>

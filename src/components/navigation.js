@@ -28,7 +28,8 @@ const Container = styled.ul`
     z-index: 50;
     ${props => (props.background ? backgroundCss : '')}
 
-    ${getFadeInCss('top: -70px;', 'top: 0;', 1800, 200)}
+    ${props =>
+        getFadeInCss('top: -70px;', 'top: 0;', props.scenario.FACE_BLOCK_FADE_IN, props.scenario.FACE_BLOCK_DELAY)}
 `;
 
 const MenuItem = styled.li`
@@ -48,7 +49,7 @@ const getBackgroundState = () => {
     return !!window.pageYOffset;
 };
 
-const Navigation = () => {
+const Navigation = ({ scenario }) => {
     const [background, setBackground] = useState(getBackgroundState());
 
     const onScroll = () => {
@@ -63,7 +64,7 @@ const Navigation = () => {
     }, []);
 
     return (
-        <Container background={background}>
+        <Container scenario={scenario} background={background}>
             <MenuItem>Старт</MenuItem>
             <MenuItem>Обо мне</MenuItem>
             <MenuItem>Навыки</MenuItem>
