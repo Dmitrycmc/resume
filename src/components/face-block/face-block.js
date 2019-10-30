@@ -1,7 +1,8 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 import background from '../../assets/images/background1.jpg';
 import Title from './title';
+import { getFadeInCss } from '../../helpers/keyframes';
 
 const Container = styled.div`
     display: flex;
@@ -15,11 +16,16 @@ const Container = styled.div`
     background-attachment: fixed;
 `;
 
-const fadeIn = keyframes`
-    to {
+const fadeInCss = getFadeInCss(
+    css`
+        opacity: 0;
+    `,
+    css`
         opacity: 1;
-    }
-`;
+    `,
+    1800,
+    500
+);
 
 const Wrapper = styled.div`
     width: fit-content;
@@ -29,12 +35,8 @@ const Wrapper = styled.div`
     border: 2px solid white;
 
     background-color: rgb(0, 0, 0, 0.2);
-    opacity: 0;
 
-    animation-name: ${fadeIn};
-    animation-duration: 1800ms;
-    animation-delay: 200ms;
-    animation-fill-mode: forwards;
+    ${fadeInCss}
 `;
 
 const Gradient = styled.div`
