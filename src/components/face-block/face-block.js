@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components/macro';
 import background from '../../assets/images/background1.jpg';
 import Title from './title';
 import { getFadeInCss } from '../../helpers/keyframes';
+import {BottomGradient, TopGradient} from "../gradient";
 
 const Container = styled.div`
     display: flex;
@@ -39,18 +40,10 @@ const Wrapper = styled.div`
     ${fadeInCss}
 `;
 
-const Gradient = styled.div`
-    position: absolute;
-
-    width: 100%;
-    height: 400px;
-
-    background: linear-gradient(black, transparent);
-`;
-
 const FaceBlock = () => (
-    <>
-        <Gradient />
+    <div style={{position: 'relative'}}>
+        <TopGradient color='black' height='500px'/>
+        <BottomGradient color='white' height='100px'/>
         <Container>
             <Wrapper>
                 <Title order={1} left={0} leftSpeed={-1}>
@@ -64,7 +57,7 @@ const FaceBlock = () => (
                 </Title>
             </Wrapper>
         </Container>
-    </>
+    </div>
 );
 
 export default FaceBlock;
