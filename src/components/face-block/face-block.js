@@ -1,9 +1,9 @@
 import React from 'react';
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 import background from '../../assets/images/background1.jpg';
 import Title from './title';
 import { getFadeInCss } from '../../helpers/keyframes';
-import {BottomGradient, TopGradient} from "../gradient";
+import { BottomGradient, TopGradient } from '../gradient';
 
 const Container = styled.div`
     display: flex;
@@ -17,17 +17,6 @@ const Container = styled.div`
     background-attachment: fixed;
 `;
 
-const fadeInCss = getFadeInCss(
-    css`
-        opacity: 0;
-    `,
-    css`
-        opacity: 1;
-    `,
-    1800,
-    500
-);
-
 const Wrapper = styled.div`
     width: fit-content;
     padding: 0 30px;
@@ -37,13 +26,13 @@ const Wrapper = styled.div`
 
     background-color: rgb(0, 0, 0, 0.2);
 
-    ${fadeInCss}
+    ${getFadeInCss('opacity: 0;', 'opacity: 1;', 1800, 500)}
 `;
 
 const FaceBlock = () => (
-    <div style={{position: 'relative'}}>
-        <TopGradient color='black' height='500px'/>
-        <BottomGradient color='white' height='100px'/>
+    <div style={{ position: 'relative' }}>
+        <TopGradient color="black" height="500px" />
+        <BottomGradient color="white" height="100px" />
         <Container>
             <Wrapper>
                 <Title order={1} left={0} leftSpeed={-1}>

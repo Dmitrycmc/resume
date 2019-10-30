@@ -1,9 +1,10 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro';
 
 export const TopGradient = styled.div`
     position: absolute;
 
     top: 0;
+
     width: 100%;
     height: ${props => props.height};
 
@@ -13,10 +14,10 @@ export const TopGradient = styled.div`
 export const BottomGradient = styled.div`
     position: absolute;
 
+    bottom: 0;
+
     width: 100%;
     height: ${props => props.height};
-
-    bottom: 0;
 
     background: linear-gradient(transparent, ${props => props.color});
 `;

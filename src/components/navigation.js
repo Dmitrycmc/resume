@@ -2,17 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components/macro';
 import { getFadeInCss } from '../helpers/keyframes';
 
-const fadeInCss = getFadeInCss(
-    css`
-        top: -70px;
-    `,
-    css`
-        top: 0;
-    `,
-    1800,
-    200
-);
-
 const backgroundCss = css`
     background-color: rgba(23, 25, 28, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -39,7 +28,7 @@ const Container = styled.ul`
     z-index: 50;
     ${props => (props.background ? backgroundCss : '')}
 
-    ${fadeInCss}
+    ${getFadeInCss('top: -70px;', 'top: 0;', 1800, 200)}
 `;
 
 const MenuItem = styled.li`

@@ -10,19 +10,17 @@ const Root = () => {
     const [remaining, setRemaining] = useState(sources.length);
     const decrementRemaining = () => setRemaining(remaining - 1);
 
-    return (
-        <>
+    return remaining ? (
+        <div>
             <Loading />
-            {remaining ? (
-                <div style={{ height: 0, overflow: 'hidden' }}>
-                    {sources.map(src => (
-                        <img src={src} onLoad={decrementRemaining} alt="" />
-                    ))}
-                </div>
-            ) : (
-                <Landing />
-            )}
-        </>
+            <div style={{ width: 0, overflow: 'hidden' }}>
+                {sources.map(src => (
+                    <img src={src} onLoad={decrementRemaining} alt="" />
+                ))}
+            </div>
+        </div>
+    ) : (
+        <Landing />
     );
 };
 
