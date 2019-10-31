@@ -4,6 +4,10 @@ self.__precacheManifest = [
     "url": "/resume/static/media/react.d21876e0.svg"
   },
   {
+    "revision": "8b2d7f4085f836f6ab3e50a215fc894f",
+    "url": "/resume/static/media/laptop.8b2d7f40.png"
+  },
+  {
     "revision": "58045dabdc3a361cb9bb9faf2f1dd1f3",
     "url": "/resume/static/media/digital-7 (mono).58045dab.ttf"
   },
@@ -20,19 +24,19 @@ self.__precacheManifest = [
     "url": "/resume/static/js/runtime~main.30522d0f.js"
   },
   {
-    "revision": "bf91387735c228d97a05",
-    "url": "/resume/static/js/main.55e985eb.chunk.js"
+    "revision": "f5892bd0c96163dc37a3",
+    "url": "/resume/static/js/main.21ea20cb.chunk.js"
   },
   {
-    "revision": "6c4a65cb6c6f314decff",
-    "url": "/resume/static/js/2.2605ae7d.chunk.js"
+    "revision": "0651d2d9d9801427be58",
+    "url": "/resume/static/js/2.48ebd31a.chunk.js"
   },
   {
-    "revision": "bf91387735c228d97a05",
+    "revision": "f5892bd0c96163dc37a3",
     "url": "/resume/static/css/main.6b5f65f6.chunk.css"
   },
   {
-    "revision": "78425a8c7dfa70c27d2a59d85871dca3",
+    "revision": "b123a3fc73503fc1e7e63ee0038692d7",
     "url": "/resume/index.html"
   }
 ];
