@@ -3,8 +3,9 @@ import Landing from './components/landing';
 import src1 from './assets/images/background1.jpg';
 import src2 from './assets/images/background2.jpg';
 import src3 from './assets/images/react.svg';
+import src4 from './assets/images/laptop.png';
 
-const sources = [src1, src2, src3];
+const sources = [src1, src2, src3, src4];
 
 const Root = () => {
     const [remaining, setRemaining] = useState(sources.length);

@@ -5,6 +5,7 @@ import Navigation from './navigation';
 import styled from 'styled-components/macro';
 import { getFadeInCss } from '../helpers/keyframes';
 import Loading from './loading';
+import ExamplesBlock from './examples-block';
 
 const scenario = {
     LOADING_DELAY: 500,
@@ -29,6 +30,8 @@ const Landing = () => (
         <Loading scenario={scenario} />
         <Container>
             <FaceBlock scenario={scenario} />
+            <AboutBlock />
+            <ExamplesBlock />
             <AboutBlock />
         </Container>
     </>

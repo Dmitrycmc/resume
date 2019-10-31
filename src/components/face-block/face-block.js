@@ -3,16 +3,19 @@ import styled from 'styled-components/macro';
 import background from '../../assets/images/background1.jpg';
 import Title from './title';
 import { getFadeInCss } from '../../helpers/keyframes';
-import { BottomGradient, TopGradient } from '../gradient';
+import { TopGradient } from '../gradient';
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
     height: 100vh;
-    padding-left: 20%;
+    padding: 70px 0 0 70px;
 
     background-image: url(${background});
+
+    background-position-x: center;
     background-size: cover;
     background-attachment: fixed;
 `;
@@ -32,7 +35,6 @@ const Wrapper = styled.div`
 const FaceBlock = ({ scenario }) => (
     <div style={{ position: 'relative' }}>
         <TopGradient color="black" height="500px" />
-        <BottomGradient color="white" height="100px" />
         <Container>
             <Wrapper scenario={scenario}>
                 <Title order={1} left={0} leftSpeed={-1}>
