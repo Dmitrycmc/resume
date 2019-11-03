@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled, { css } from 'styled-components/macro';
+import React from 'react';
+import styled from 'styled-components/macro';
 import laptop from '../assets/images/laptop.png';
+import snakeScreen from '../assets/images/snake-screen.png';
 
 const Container = styled.div`
     position: relative;
@@ -24,52 +25,41 @@ const Slider = styled.div`
     padding: 70px 0 0 0;
 `;
 
-const getRectCss = props =>
-    props.imageRect
-        ? css`
-              top: ${props.imageRect.top + 0.07 * props.imageRect.height}px;
-              left: ${props.imageRect.left + 0.17 * props.imageRect.width}px;
-
-              width: ${0.655 * props.imageRect.width}px;
-              height: ${0.775 * props.imageRect.height}px;
-          `
-        : '';
-
 const Content = styled.div`
     position: absolute;
 
     z-index: -10;
-    ${getRectCss}
 `;
 
-const StyledImage = styled.img`
+const FrameImage = styled.img`
+width: 100%
+`;
+
+const ScreenImage = styled.img`
+position: absolute;
+
+top: 7%;
+left: 17%;
+
+width: 65.5%;
+height: 77.5%;
+`;
+
+const Wrapper = styled.div`
     max-width: 80%;
     max-height: 80%;
+    position: relative;
 `;
 
-const ExamplesBlock = () => {
-    const [imageRect, setImageRect] = useState(null);
-
-    const imageRef = useRef();
-    const onResize = () => {
-        setImageRect(imageRef.current.getBoundingClientRect());
-    };
-
-    useEffect(() => {
-        window.addEventListener('resize', onResize);
-        return () => {
-            window.removeEventListener('resize', onResize);
-        };
-    }, []);
-
-    return (
+const ExamplesBlock = () => (
         <Container>
             <Slider>
-                <StyledImage src={laptop} alt="frame" ref={imageRef} />
-                <Content imageRect={imageRect}>sfsdf</Content>
+                <Wrapper>
+                    <FrameImage src={laptop} alt="frame" />
+                    <ScreenImage src={snakeScreen} alt="snake screen" />
+                </Wrapper>
             </Slider>
         </Container>
     );
-};
 
 export default ExamplesBlock;
