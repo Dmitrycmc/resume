@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import background2 from '../assets/images/background2.jpg';
-import { BottomGradient } from './gradient';
+import Gradient from './gradient';
 
 const Container = styled.div`
     position: relative;
@@ -18,7 +18,7 @@ const Container = styled.div`
 
 const AboutBlock = () => (
     <Container>
-        <BottomGradient color="#dedede" height="100px" />
+        <Gradient color="#dedede" height="100px" direction="bottom" />
         about
     </Container>
 );

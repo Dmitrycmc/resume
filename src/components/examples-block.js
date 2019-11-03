@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import laptop from '../assets/images/laptop.png';
-import { TopGradient } from './gradient';
+import Gradient from './gradient';
 
 const Container = styled.div`
     position: relative;
@@ -11,7 +11,7 @@ const Container = styled.div`
     background-color: #161616;
 `;
 
-const Frame = styled.div`
+const StyledFrame = styled.div`
     position: sticky;
     top: 0;
 
@@ -38,11 +38,11 @@ const Content = styled.div`
 
 const ExamplesBlock = () => (
     <Container>
-        <TopGradient color="#dedede" height="100%" />
-        <Frame>
+        <Gradient color="#dedede" height="100%" direction="top" />
+        <StyledFrame>
             <img src={laptop} alt="frame" width="80%" />
             <Content>sfsdf</Content>
-        </Frame>
+        </StyledFrame>
     </Container>
 );
 

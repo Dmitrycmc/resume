@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import background from '../../assets/images/background1.jpg';
 import Title from './title';
 import { getFadeInCss } from '../../helpers/keyframes';
-import { TopGradient } from '../gradient';
+import Gradient from '../gradient';
 
 const Container = styled.div`
     display: flex;
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 
 const FaceBlock = ({ scenario }) => (
     <div style={{ position: 'relative' }}>
-        <TopGradient color="black" height="500px" />
+        <Gradient color="black" height="500px" direction="top" />
         <Container>
             <Wrapper scenario={scenario}>
                 <Title order={1} left={0} leftSpeed={-1}>
