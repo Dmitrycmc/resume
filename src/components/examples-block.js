@@ -1,17 +1,16 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React, { useEffect, useRef, useState } from 'react';
+import styled, { css } from 'styled-components/macro';
 import laptop from '../assets/images/laptop.png';
-import Gradient from './gradient';
 
 const Container = styled.div`
     position: relative;
 
     height: 500vh;
 
-    background-color: #161616;
+    background: linear-gradient(to bottom, #dedede 20%, #161616 80%);
 `;
 
-const StyledFrame = styled.div`
+const Slider = styled.div`
     position: sticky;
     top: 0;
 
@@ -25,25 +24,52 @@ const StyledFrame = styled.div`
     padding: 70px 0 0 0;
 `;
 
+const getRectCss = props =>
+    props.imageRect
+        ? css`
+              top: ${props.imageRect.top + 0.07 * props.imageRect.height}px;
+              left: ${props.imageRect.left + 0.17 * props.imageRect.width}px;
+
+              width: ${0.655 * props.imageRect.width}px;
+              height: ${0.775 * props.imageRect.height}px;
+          `
+        : '';
+
 const Content = styled.div`
     position: absolute;
-    top: 21.5%;
+
     z-index: -10;
-
-    width: 53%;
-    height: 62%;
-
-    background-color: blue;
+    ${getRectCss}
 `;
 
-const ExamplesBlock = () => (
-    <Container>
-        <Gradient color="#dedede" height="100%" direction="top" />
-        <StyledFrame>
-            <img src={laptop} alt="frame" width="80%" />
-            <Content>sfsdf</Content>
-        </StyledFrame>
-    </Container>
-);
+const StyledImage = styled.img`
+    max-width: 80%;
+    max-height: 80%;
+`;
+
+const ExamplesBlock = () => {
+    const [imageRect, setImageRect] = useState(null);
+
+    const imageRef = useRef();
+    const onResize = () => {
+        setImageRect(imageRef.current.getBoundingClientRect());
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', onResize);
+        return () => {
+            window.removeEventListener('resize', onResize);
+        };
+    }, []);
+
+    return (
+        <Container>
+            <Slider>
+                <StyledImage src={laptop} alt="frame" ref={imageRef} />
+                <Content imageRect={imageRect}>sfsdf</Content>
+            </Slider>
+        </Container>
+    );
+};
 
 export default ExamplesBlock;
