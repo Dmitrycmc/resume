@@ -4,7 +4,7 @@ import AboutBlock from './about-block';
 import Navigation from './navigation';
 import styled from 'styled-components/macro';
 import { getFadeInCss } from '../helpers/keyframes';
-import Intro from './intro';
+import IntroBlock from './intro-block';
 import ExamplesBlock from './examples-block';
 
 const scenario = {
@@ -28,7 +28,7 @@ const Container = styled.div`
 const Landing = () => (
     <>
         <Navigation scenario={scenario} />
-        <Intro scenario={scenario} />
+        <IntroBlock scenario={scenario} />
         <Container>
             <FaceBlock scenario={scenario} />
             <AboutBlock />

@@ -48,7 +48,7 @@ const Edge = styled.div`
     ${props => `background: linear-gradient(to ${props.right ? 'right' : 'left'}, black, transparent)`}
 `;
 
-const Intro = ({ scenario }) => (
+const IntroBlock = ({ scenario }) => (
     <Wrapper>
         <Title width="570px" scenario={scenario}>
             made with
@@ -62,4 +62,4 @@ const Intro = ({ scenario }) => (
     </Wrapper>
 );
 
-export default Intro;
+export default IntroBlock;
