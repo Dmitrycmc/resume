@@ -21,8 +21,8 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-    width: 0;
-    width: 50px;
+    position: relative;
+    ${props => `left: ${props.right ? '-' : ''}50px`}
 
     white-space: nowrap;
 
@@ -39,16 +39,27 @@ const Title = styled.div`
         )}
 `;
 
-const Loading = ({ scenario }) => (
+const Edge = styled.div`
+    z-index: 10;
+
+    width: 50px;
+    height: 1em;
+
+    ${props => `background: linear-gradient(to ${props.right ? 'right' : 'left'}, black, transparent)`}
+`;
+
+const Intro = ({ scenario }) => (
     <Wrapper>
-        <Title width="520px" scenario={scenario}>
+        <Title width="570px" scenario={scenario}>
             made with
         </Title>
+        <Edge />
         <img src={reactIcon} alt="" />
-        <Title right width="320px" scenario={scenario}>
+        <Edge right />
+        <Title right width="350px" scenario={scenario}>
             react
         </Title>
     </Wrapper>
 );
 
-export default Loading;
+export default Intro;

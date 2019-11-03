@@ -4,7 +4,7 @@ import AboutBlock from './about-block';
 import Navigation from './navigation';
 import styled from 'styled-components/macro';
 import { getFadeInCss } from '../helpers/keyframes';
-import Loading from './loading';
+import Intro from './intro';
 import ExamplesBlock from './examples-block';
 
 const scenario = {
@@ -21,13 +21,14 @@ const Container = styled.div`
 
     width: 100%;
 
+    z-index: 100;
     ${getFadeInCss('top: 100vh;', 'top: 0;', scenario.FACE_BLOCK_FADE_IN, scenario.FACE_BLOCK_DELAY)}
 `;
 
 const Landing = () => (
     <>
         <Navigation scenario={scenario} />
-        <Loading scenario={scenario} />
+        <Intro scenario={scenario} />
         <Container>
             <FaceBlock scenario={scenario} />
             <AboutBlock />

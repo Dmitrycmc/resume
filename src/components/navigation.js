@@ -25,7 +25,7 @@ const Container = styled.ul`
 
     transition: background-color 0.5s, box-shadow 0.5s;
 
-    z-index: 50;
+    z-index: 150;
     ${props => (props.background ? backgroundCss : '')}
 
     ${props =>
