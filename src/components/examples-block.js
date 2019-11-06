@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import laptop from '../assets/images/laptop.png';
 import snakeScreen from '../assets/images/snake-screen.png';
+import Laptop from './Laptop';
 
 const Container = styled.div`
     position: relative;
@@ -25,41 +25,14 @@ const Slider = styled.div`
     padding: 70px 0 0 0;
 `;
 
-const Content = styled.div`
-    position: absolute;
-
-    z-index: -10;
-`;
-
-const FrameImage = styled.img`
-width: 100%
-`;
-
-const ScreenImage = styled.img`
-position: absolute;
-
-top: 7%;
-left: 17%;
-
-width: 65.5%;
-height: 77.5%;
-`;
-
-const Wrapper = styled.div`
-    max-width: 80%;
-    max-height: 80%;
-    position: relative;
-`;
-
 const ExamplesBlock = () => (
-        <Container>
-            <Slider>
-                <Wrapper>
-                    <FrameImage src={laptop} alt="frame" />
-                    <ScreenImage src={snakeScreen} alt="snake screen" />
-                </Wrapper>
-            </Slider>
-        </Container>
-    );
+    <Container>
+        <Slider>
+            <Laptop maxWidth={80} maxHeight={70}>
+                <img src={snakeScreen} width="100%" alt="snake screen" />
+            </Laptop>
+        </Slider>
+    </Container>
+);
 
 export default ExamplesBlock;
