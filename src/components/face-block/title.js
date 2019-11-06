@@ -17,7 +17,7 @@ const Container = styled.div`
 
     transition: opacity 1s;
 
-    ${props => getFadeInCss('opacity: 0;', 'opacity: 1;', 1000, props.order * 300 + 1900)}
+    ${props => getFadeInCss('opacity: 0;', 'opacity: 1;', 1000, props.order * 300 + 3500)}
 `;
 
 const Title = props => {

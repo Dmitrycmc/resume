@@ -7,9 +7,11 @@ import { getFadeInCss } from '../helpers/keyframes';
 import Loading from './loading';
 
 const scenario = {
-    FACE_BLOCK_DELAY: 500,
-    FACE_BLOCK_FADE_IN: 1800,
-    TITLE_DELAY: 1800,
+    LOADING_DELAY: 500,
+    LOADING_FADE_IN: 1000,
+    FACE_BLOCK_DELAY: 2000,
+    FACE_BLOCK_FADE_IN: 1500,
+    TITLE_DELAY: 3500,
     TITLE_FADE_IN: 500
 };
 
@@ -24,7 +26,7 @@ const Container = styled.div`
 const Landing = () => (
     <>
         <Navigation scenario={scenario} />
-        <Loading />
+        <Loading scenario={scenario} />
         <Container>
             <FaceBlock scenario={scenario} />
             <AboutBlock />

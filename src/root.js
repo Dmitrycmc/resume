@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Landing from './components/landing';
 import src1 from './assets/images/background1.jpg';
 import src2 from './assets/images/background2.jpg';
-import Loading from './components/loading';
+import src3 from './assets/images/react.svg';
 
-const sources = [src1, src2];
+const sources = [src1, src2, src3];
 
 const Root = () => {
     const [remaining, setRemaining] = useState(sources.length);
@@ -12,7 +12,6 @@ const Root = () => {
 
     return remaining ? (
         <div>
-            <Loading />
             <div style={{ width: 0, overflow: 'hidden' }}>
                 {sources.map(src => (
                     <img src={src} onLoad={decrementRemaining} alt="" />
