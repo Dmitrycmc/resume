@@ -1,11 +1,11 @@
 import React from 'react';
 import FaceBlock from './face-block/face-block';
-import AboutBlock from './about-block';
-import Navigation from './navigation';
+import AboutBlock from './about-block/about-block';
+import Navigation from './navigation/navigation';
 import styled from 'styled-components/macro';
 import { getFadeInCss } from '../helpers/keyframes';
-import IntroBlock from './intro-block';
-import ExamplesBlock from './examples-block';
+import IntroBlock from './intro-block/intro-block';
+import ExamplesBlock from './examples-block/examples-block';
 
 const scenario = {
     LOADING_DELAY: 500,

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components/macro';
-import { getFadeInCss } from '../helpers/keyframes';
+import { getFadeInCss } from '../../helpers/keyframes';
 
 const backgroundCss = css`
     background-color: rgba(23, 25, 28, 0.9);

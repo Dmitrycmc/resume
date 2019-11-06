@@ -1,6 +1,6 @@
 import React from 'react';
-import ConstAspectRatio from './const-aspect-ratio';
-import laptop from '../assets/images/laptop.png';
+import ConstAspectRatio from '../const-aspect-ratio';
+import laptop from '../../assets/images/laptop.png';
 import styled from 'styled-components/macro';
 
 const ScreenFrame = styled.img`

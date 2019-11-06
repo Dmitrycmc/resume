@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import reactIcon from '../assets/images/react.svg';
-import { getFadeInCss } from '../helpers/keyframes';
+import reactIcon from '../../assets/images/react.svg';
+import { getFadeInCss } from '../../helpers/keyframes';
 
 const Wrapper = styled.div`
     display: flex;

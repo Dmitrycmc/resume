@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import snakeScreen from '../assets/images/snake-screen.png';
-import Laptop from './Laptop';
+import snakeScreen from '../../assets/images/snake-screen.png';
+import Laptop from './laptop';
 
 const Container = styled.div`
     position: relative;

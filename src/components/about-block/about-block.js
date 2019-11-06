@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import background2 from '../assets/images/background2.jpg';
-import Gradient from './gradient';
+import background2 from '../../assets/images/background2.jpg';
+import Gradient from '../gradient';
 
 const Container = styled.div`
     position: relative;
