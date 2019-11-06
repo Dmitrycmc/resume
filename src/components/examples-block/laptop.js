@@ -14,11 +14,14 @@ const ScreenContent = styled.div`
     bottom: 15.8%;
     left: 17.02%;
     z-index: -5;
+
+    background-image: url(${props => props.image});
+    background-size: cover;
 `;
-const Laptop = ({ maxWidth, maxHeight, children }) => (
+const Laptop = ({ maxWidth, maxHeight, children, image }) => (
     <ConstAspectRatio ratio={24 / 13} maxWidth={maxWidth} maxHeight={maxHeight}>
         <ScreenFrame src={laptop} alt="frame" />
-        <ScreenContent children={children} />
+        <ScreenContent children={children} image={image} />
     </ConstAspectRatio>
 );
 
