@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import FaceBlock from './face-block/face-block';
 import AboutBlock from './about-block/about-block';
 import Navigation from './navigation/navigation';
@@ -7,7 +7,7 @@ import { getFadeInCss } from '../helpers/keyframes';
 import IntroBlock from './intro-block/intro-block';
 import ExamplesBlock from './examples-block/examples-block';
 import background from '../assets/images/background3.jpeg';
-import Gradient from "./gradient";
+import Gradient from './gradient';
 
 const scenario = {
     LOADING_DELAY: 500,
@@ -28,32 +28,43 @@ const Container = styled.div`
 `;
 
 const LastBlock = styled.div`
+    position: relative;
+
+    height: 100vh;
+
     background-color: #161616;
     background-image: url(${background});
-    height: 100vh;
     background-size: cover;
-    position: relative;
 `;
 
 const Landing = () => {
     const faceRef = useRef();
     const aboutRef = useRef();
     const examplesRef = useRef();
+    const lastRef = useRef();
 
     return (
         <>
-            <Navigation scenario={scenario} faceRef={faceRef} aboutRef={aboutRef} examplesRef={examplesRef}/>
+            <Navigation
+                scenario={scenario}
+                blocks={[
+                    { ref: faceRef, title: 'старт' },
+                    { ref: aboutRef, title: 'обо мне' },
+                    { ref: examplesRef, title: 'примеры' },
+                    { ref: lastRef, title: 'конец' }
+                ]}
+            />
             <IntroBlock scenario={scenario} />
             <Container>
-                <FaceBlock scenario={scenario} innerRef={faceRef}/>
-                <AboutBlock innerRef={aboutRef}/>
-                <ExamplesBlock innerRef={examplesRef}/>
-                <LastBlock >
+                <FaceBlock scenario={scenario} innerRef={faceRef} />
+                <AboutBlock innerRef={aboutRef} />
+                <ExamplesBlock innerRef={examplesRef} />
+                <LastBlock ref={lastRef}>
                     <Gradient color="#161616" height="100px" direction="top" />
                 </LastBlock>
             </Container>
         </>
     );
-}
+};
 
 export default Landing;

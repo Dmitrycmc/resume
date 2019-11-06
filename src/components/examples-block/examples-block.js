@@ -25,7 +25,7 @@ const Slider = styled.div`
     padding: 70px 0 0 0;
 `;
 
-const ExamplesBlock = ({innerRef}) => (
+const ExamplesBlock = ({ innerRef }) => (
     <Container ref={innerRef}>
         <Slider>
             <Laptop maxWidth={80} maxHeight={70}>
