@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import FaceBlock from './face-block/face-block';
 import AboutBlock from './about-block/about-block';
 import Navigation from './navigation/navigation';
@@ -35,19 +35,25 @@ const LastBlock = styled.div`
     position: relative;
 `;
 
-const Landing = () => (
-    <>
-        <Navigation scenario={scenario} />
-        <IntroBlock scenario={scenario} />
-        <Container>
-            <FaceBlock scenario={scenario} />
-            <AboutBlock />
-            <ExamplesBlock />
-            <LastBlock >
-                <Gradient color="#161616" height="100px" direction="top" />
-            </LastBlock>
-        </Container>
-    </>
-);
+const Landing = () => {
+    const faceRef = useRef();
+    const aboutRef = useRef();
+    const examplesRef = useRef();
+
+    return (
+        <>
+            <Navigation scenario={scenario} faceRef={faceRef} aboutRef={aboutRef} examplesRef={examplesRef}/>
+            <IntroBlock scenario={scenario} />
+            <Container>
+                <FaceBlock scenario={scenario} innerRef={faceRef}/>
+                <AboutBlock innerRef={aboutRef}/>
+                <ExamplesBlock innerRef={examplesRef}/>
+                <LastBlock >
+                    <Gradient color="#161616" height="100px" direction="top" />
+                </LastBlock>
+            </Container>
+        </>
+    );
+}
 
 export default Landing;

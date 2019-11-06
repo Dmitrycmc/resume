@@ -49,7 +49,11 @@ const getBackgroundState = () => {
     return !!window.pageYOffset;
 };
 
-const Navigation = ({ scenario }) => {
+const scrollTo = ref => {
+    ref && ref.current && window.scrollTo(0, ref.current.getBoundingClientRect().top - document.getElementById('root').getBoundingClientRect().top);
+};
+
+const Navigation = ({ scenario, faceRef, aboutRef, examplesRef }) => {
     const [background, setBackground] = useState(getBackgroundState());
 
     const onScroll = () => {
@@ -65,11 +69,11 @@ const Navigation = ({ scenario }) => {
 
     return (
         <Container scenario={scenario} background={background}>
-            <MenuItem>Старт</MenuItem>
-            <MenuItem>Обо мне</MenuItem>
+            <MenuItem onClick={() => scrollTo(faceRef)}>Старт</MenuItem>
+            <MenuItem onClick={() => scrollTo(aboutRef)}>Обо мне</MenuItem>
             <MenuItem>Навыки</MenuItem>
             <MenuItem>Образование и опыт</MenuItem>
-            <MenuItem>Примеры</MenuItem>
+            <MenuItem onClick={() => scrollTo(examplesRef)}>Примеры</MenuItem>
             <MenuItem>Контакты</MenuItem>
         </Container>
     );

@@ -32,8 +32,8 @@ const Wrapper = styled.div`
     ${props => getFadeInCss('opacity: 0;', 'opacity: 1;', props.scenario.TITLE_FADE_IN, props.scenario.TITLE_DELAY)}
 `;
 
-const FaceBlock = ({ scenario }) => (
-    <div style={{ position: 'relative' }}>
+const FaceBlock = ({ scenario, innerRef }) => (
+    <div style={{ position: 'relative' }} ref={innerRef}>
         <Gradient color="black" height="500px" direction="top" />
         <Container>
             <Wrapper scenario={scenario}>

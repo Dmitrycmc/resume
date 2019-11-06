@@ -16,8 +16,8 @@ const Root = () => {
     return remaining ? (
         <div>
             <div style={{ width: 0, overflow: 'hidden' }}>
-                {sources.map(src => (
-                    <img src={src} onLoad={decrementRemaining} alt="" />
+                {sources.map((src, i) => (
+                    <img key={i} src={src} onLoad={decrementRemaining} alt="" />
                 ))}
             </div>
         </div>

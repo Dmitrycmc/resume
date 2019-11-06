@@ -16,8 +16,8 @@ const Container = styled.div`
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
 `;
 
-const AboutBlock = () => (
-    <Container>
+const AboutBlock = ({innerRef}) => (
+    <Container ref={innerRef}>
         <Gradient color="#dedede" height="100px" direction="bottom" />
         about
     </Container>
