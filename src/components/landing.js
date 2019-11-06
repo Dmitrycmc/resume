@@ -6,6 +6,8 @@ import styled from 'styled-components/macro';
 import { getFadeInCss } from '../helpers/keyframes';
 import IntroBlock from './intro-block/intro-block';
 import ExamplesBlock from './examples-block/examples-block';
+import background from '../assets/images/background3.jpeg';
+import Gradient from "./gradient";
 
 const scenario = {
     LOADING_DELAY: 500,
@@ -25,6 +27,14 @@ const Container = styled.div`
     ${getFadeInCss('top: 100vh;', 'top: 0;', scenario.FACE_BLOCK_FADE_IN, scenario.FACE_BLOCK_DELAY)}
 `;
 
+const LastBlock = styled.div`
+    background-color: #161616;
+    background-image: url(${background});
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+`;
+
 const Landing = () => (
     <>
         <Navigation scenario={scenario} />
@@ -33,7 +43,9 @@ const Landing = () => (
             <FaceBlock scenario={scenario} />
             <AboutBlock />
             <ExamplesBlock />
-            <AboutBlock />
+            <LastBlock >
+                <Gradient color="#161616" height="100px" direction="top" />
+            </LastBlock>
         </Container>
     </>
 );
