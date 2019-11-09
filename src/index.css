@@ -5,6 +5,13 @@
     src: url('./assets/fonts/digital-7/digital-7 (mono).ttf');
 }
 
+@font-face {
+    font-weight: 400;
+    font-family: "Erica Type";
+    font-style: normal;
+    src: url('./assets/fonts/erica-type/erica-type.ttf');
+}
+
 body {
     margin: 0;
     overflow-x: hidden;
