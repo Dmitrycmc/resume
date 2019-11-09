@@ -45,14 +45,14 @@ const Title = styled.div`
 
 const restrictBy = (max = 1, min = 0) => x => Math.max(Math.min(max, x), min);
 
-const ExamplesBlock = ({ innerRef, images = [], titles = [], captions = [] }) => {
+const ExamplesBlock = ({ innerRef, examples = [] }) => {
     const [exampleIndex, setExampleIndex] = useState(0);
 
     const onScroll = () => {
         if (innerRef && innerRef.current) {
             const rect = innerRef.current.getBoundingClientRect();
             const progress = restrictBy()(-rect.top / (rect.height - window.innerHeight));
-            const imageIndex = progress === 1 ? images.length - 1 : Math.floor(progress * images.length);
+            const imageIndex = progress === 1 ? examples.length - 1 : Math.floor(progress * examples.length);
             setExampleIndex(imageIndex);
         }
     };
@@ -68,14 +68,14 @@ const ExamplesBlock = ({ innerRef, images = [], titles = [], captions = [] }) =>
         <Container ref={innerRef}>
             <StickyWrapper>
                 <Description>
-                    {titles.map(t => (
-                        <Title exampleIndex={exampleIndex}>{t}</Title>
+                    {examples.map(({title}) => (
+                        <Title exampleIndex={exampleIndex}>{title}</Title>
                     ))}
                 </Description>
-                <Laptop maxWidth={80} maxHeight={50} image={images[exampleIndex]} />
+                <Laptop maxWidth={80} maxHeight={50} image={examples[exampleIndex].imageSrc} />
                 <Description>
-                    {captions.map(t => (
-                        <Title exampleIndex={exampleIndex}>{t}</Title>
+                    {examples.map(({caption}) => (
+                        <Title exampleIndex={exampleIndex}>{caption}</Title>
                     ))}
                 </Description>
             </StickyWrapper>

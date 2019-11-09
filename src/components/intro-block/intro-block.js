@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ReactIcon from '../../assets/icons/js';
+import ReactIcon from '../../assets/icons/react';
 import { getFadeInCss } from '../../helpers/keyframes';
 
 const Wrapper = styled.div`
@@ -54,7 +54,7 @@ const IntroBlock = ({ scenario }) => (
             made with
         </Title>
         <Edge />
-        <ReactIcon />
+        <ReactIcon width="200"/>
         <Edge right />
         <Title right width="350px" scenario={scenario}>
             react

@@ -9,6 +9,9 @@ import ExamplesBlock from './examples-block/examples-block';
 import background from '../assets/images/background3.jpeg';
 import snakeScreen from '../assets/images/snake-screen.png';
 import HomeIcon from '../assets/icons/home';
+import JsIcon from '../assets/icons/js';
+import SvgIcon from '../assets/icons/svg';
+import ReactIcon from '../assets/icons/react';
 import Gradient from './gradient';
 
 const scenario = {
@@ -62,9 +65,23 @@ const Landing = () => {
                 <AboutBlock innerRef={aboutRef} />
                 <ExamplesBlock
                     innerRef={examplesRef}
-                    images={[snakeScreen]}
-                    titles={['Змейка']}
-                    captions={['canvas']}
+                    examples={[
+                        {
+                            title: <JsIcon />,
+                            imageSrc: snakeScreen,
+                            caption: 'Snake-game'
+                        },
+                        {
+                            title: <SvgIcon />,
+                            imageSrc: snakeScreen,
+                            caption: 'Snake-game'
+                        },
+                        {
+                            title: <ReactIcon style={{color: '#53C1DE'}} />,
+                            imageSrc: snakeScreen,
+                            caption: 'Snake-game'
+                        }
+                    ]}
                 />
                 <LastBlock ref={lastRef}>
                     <Gradient color="#161616" height="100px" direction="top" />
