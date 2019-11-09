@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
-import snakeScreen from '../../assets/images/snake-screen.png';
-import bg1 from '../../assets/images/background1.jpg';
-import bg2 from '../../assets/images/background2.jpg';
-import bg3 from '../../assets/images/background3.jpeg';
 import Laptop from './laptop';
 
 const Container = styled.div`
@@ -14,7 +10,7 @@ const Container = styled.div`
     background: linear-gradient(to bottom, #dedede 20%, #161616 80%);
 `;
 
-const Slider = styled.div`
+const StickyWrapper = styled.div`
     position: sticky;
     top: 0;
 
@@ -30,19 +26,33 @@ const Slider = styled.div`
 `;
 
 const Description = styled.div`
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    overflow: hidden;
+`;
+
+const Title = styled.div`
+    position: relative;
+    left: ${props => -props.exampleIndex * 100}%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: left 500ms;
 `;
 
-const ExamplesBlock = ({ innerRef, images = [snakeScreen, bg1, bg2, bg3] }) => {
+const restrictBy = (max = 1, min = 0) => x => Math.max(Math.min(max, x), min);
+
+const ExamplesBlock = ({ innerRef, images = [], titles = [], captions = [] }) => {
     const [exampleIndex, setExampleIndex] = useState(0);
 
     const onScroll = () => {
         if (innerRef && innerRef.current) {
             const rect = innerRef.current.getBoundingClientRect();
-            const progress = (window.innerHeight - rect.top) / (rect.height + window.innerHeight);
-            const imageIndex = Math.floor(progress * images.length);
+            const progress = restrictBy()(-rect.top / (rect.height - window.innerHeight));
+            const imageIndex = progress === 1 ? images.length - 1 : Math.floor(progress * images.length);
             setExampleIndex(imageIndex);
         }
     };
@@ -56,11 +66,19 @@ const ExamplesBlock = ({ innerRef, images = [snakeScreen, bg1, bg2, bg3] }) => {
 
     return (
         <Container ref={innerRef}>
-            <Slider>
-                <Description>{['1', '2', '3', '4'][exampleIndex]}</Description>
+            <StickyWrapper>
+                <Description>
+                    {titles.map(t => (
+                        <Title exampleIndex={exampleIndex}>{t}</Title>
+                    ))}
+                </Description>
                 <Laptop maxWidth={80} maxHeight={50} image={images[exampleIndex]} />
-                <Description>{['1', '2', '3', '4'][exampleIndex]}</Description>
-            </Slider>
+                <Description>
+                    {captions.map(t => (
+                        <Title exampleIndex={exampleIndex}>{t}</Title>
+                    ))}
+                </Description>
+            </StickyWrapper>
         </Container>
     );
 };
