@@ -3,11 +3,11 @@ import Landing from './components/landing';
 import src1 from './assets/images/background1.jpg';
 import src2 from './assets/images/background2.jpg';
 import src3 from './assets/images/background3.jpeg';
-import src4 from './assets/images/react.svg';
-import src5 from './assets/images/laptop.png';
-import src6 from './assets/images/snake-screen.png';
+import src4 from './assets/icons/react.svg';
+import src6 from './assets/images/laptop.png';
+import src7 from './assets/images/snake-screen.png';
 
-const sources = [src1, src2, src3, src4, src5, src6];
+const sources = [src1, src2, src3, src4, src6, src7];
 
 const Root = () => {
     const [remaining, setRemaining] = useState(sources.length);

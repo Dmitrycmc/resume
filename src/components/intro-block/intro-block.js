@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import reactIcon from '../../assets/images/react.svg';
+import reactIcon from '../../assets/icons/react.svg';
 import { getFadeInCss } from '../../helpers/keyframes';
 
 const Wrapper = styled.div`

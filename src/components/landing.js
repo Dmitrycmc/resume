@@ -8,6 +8,7 @@ import IntroBlock from './intro-block/intro-block';
 import ExamplesBlock from './examples-block/examples-block';
 import background from '../assets/images/background3.jpeg';
 import snakeScreen from '../assets/images/snake-screen.png';
+import HomeIcon from '../assets/icons/home';
 import Gradient from './gradient';
 
 const scenario = {
@@ -49,8 +50,8 @@ const Landing = () => {
             <Navigation
                 scenario={scenario}
                 blocks={[
-                    { ref: faceRef, title: 'старт' },
-                    { ref: aboutRef, title: 'обо мне' },
+                    { ref: faceRef, title: <HomeIcon /> },
+                    { ref: aboutRef, title: 'о себе' },
                     { ref: examplesRef, title: 'примеры' },
                     { ref: lastRef, title: 'конец' }
                 ]}
