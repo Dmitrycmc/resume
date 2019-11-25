@@ -1,47 +1,65 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 import Laptop from './laptop';
-
 import snakeScreen from '../../assets/examples/snake-game/screen.png';
+import { source as snakeSource, deploy as snakeDeploy } from '../../assets/examples/snake-game/data';
 import chartScreen from '../../assets/examples/chart/screen.png';
+import { source as chartSource, deploy as chartDeploy } from '../../assets/examples/chart/data';
 import resumeScreen from '../../assets/examples/resume/screen.png';
+import { source as resumeSource, deploy as resumeDeploy } from '../../assets/examples/resume/data';
 import tableScreen from '../../assets/examples/flight-table/screen.png';
+import { source as tableSource, deploy as tableDeploy } from '../../assets/examples/flight-table/data';
 import trackerScreen from '../../assets/examples/work-tracker/screen.png';
-
-import { source as snakeSource, deploy as snakeDeploy } from '../../assets/examples/snake-game/screen.png';
-import { source as chartSource, deploy as chartDeploy } from '../../assets/examples/chart/screen.png';
-import { source as resumeSource, deploy as resumeDeploy } from '../../assets/examples/resume/screen.png';
-import { source as tableSource, deploy as tableDeploy } from '../../assets/examples/resume/screen.png';
-import { source as trackerSource, deploy as trackerDeploy } from '../../assets/examples/work-tracker/screen.png';
-
+import { source as trackerSource, deploy as trackerDeploy } from '../../assets/examples/work-tracker/data';
 import JsIcon from '../../assets/icons/js';
 import SvgIcon from '../../assets/icons/svg';
 import ReactIcon from '../../assets/icons/react';
+import Links from './links';
 
 const examples = [
     {
         title: <ReactIcon style={{ color: '#53C1DE' }} />,
         imageSrc: resumeScreen,
+        deploy: resumeDeploy,
+        source: resumeSource,
         caption: 'Resume'
     },
     {
-        title: <JsIcon/>,
+        title: <JsIcon />,
         imageSrc: tableScreen,
+        deploy: tableDeploy,
+        source: tableSource,
         caption: 'Flight table'
     },
     {
         title: <ReactIcon style={{ color: '#53C1DE' }} />,
         imageSrc: trackerScreen,
+        deploy: trackerDeploy,
+        source: trackerSource,
         caption: 'Work tracker'
     },
     {
-        title: <><JsIcon/><SvgIcon/></>,
+        title: (
+            <>
+                <JsIcon />
+                <SvgIcon />
+            </>
+        ),
         imageSrc: snakeScreen,
+        deploy: snakeDeploy,
+        source: snakeSource,
         caption: 'Snake'
     },
     {
-        title: <><JsIcon /><SvgIcon />></>,
+        title: (
+            <>
+                <JsIcon />
+                <SvgIcon />>
+            </>
+        ),
         imageSrc: chartScreen,
+        deploy: chartDeploy,
+        source: chartSource,
         caption: 'Chart'
     }
 ];
@@ -60,7 +78,7 @@ const StickyWrapper = styled.div`
 
     display: grid;
     grid-template-rows: 1fr auto 1fr;
-    justify-content: center;
+    justify-items: center;
 
     box-sizing: border-box;
     width: 100%;
@@ -112,14 +130,19 @@ const ExamplesBlock = ({ innerRef }) => {
         <Container ref={innerRef}>
             <StickyWrapper>
                 <Description>
-                    {examples.map(({ title }) => (
-                        <Title exampleIndex={exampleIndex}>{title}</Title>
+                    {examples.map(({ title, caption }) => (
+                        <Title exampleIndex={exampleIndex}>
+                            {title}
+                            {caption}
+                        </Title>
                     ))}
                 </Description>
                 <Laptop maxWidth={80} maxHeight={50} image={examples[exampleIndex].imageSrc} />
                 <Description>
-                    {examples.map(({ caption }) => (
-                        <Title exampleIndex={exampleIndex}>{caption}</Title>
+                    {examples.map(({ deploy, source }) => (
+                        <Title exampleIndex={exampleIndex}>
+                            <Links deploy={deploy} source={source} />
+                        </Title>
                     ))}
                 </Description>
             </StickyWrapper>
