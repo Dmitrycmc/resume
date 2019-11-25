@@ -38,15 +38,9 @@ const FaceBlock = ({ scenario, innerRef }) => (
         <Gradient color="black" height="500px" direction="top" />
         <Container>
             <Wrapper scenario={scenario}>
-                <Title order={1} left={0} leftSpeed={-1}>
-                    Middle
-                </Title>
-                <Title order={2} left={45} leftSpeed={0.2}>
-                    Frontend
-                </Title>
-                <Title order={3} left={20} leftSpeed={-0.3}>
-                    Developer
-                </Title>
+                <Title order={1}>Middle</Title>
+                <Title order={2}>Frontend</Title>
+                <Title order={3}>Developer</Title>
             </Wrapper>
         </Container>
     </div>
