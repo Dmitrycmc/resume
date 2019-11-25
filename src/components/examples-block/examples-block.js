@@ -2,6 +2,50 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 import Laptop from './laptop';
 
+import snakeScreen from '../../assets/examples/snake-game/screen.png';
+import chartScreen from '../../assets/examples/chart/screen.png';
+import resumeScreen from '../../assets/examples/resume/screen.png';
+import tableScreen from '../../assets/examples/flight-table/screen.png';
+import trackerScreen from '../../assets/examples/work-tracker/screen.png';
+
+import { source as snakeSource, deploy as snakeDeploy } from '../../assets/examples/snake-game/screen.png';
+import { source as chartSource, deploy as chartDeploy } from '../../assets/examples/chart/screen.png';
+import { source as resumeSource, deploy as resumeDeploy } from '../../assets/examples/resume/screen.png';
+import { source as tableSource, deploy as tableDeploy } from '../../assets/examples/resume/screen.png';
+import { source as trackerSource, deploy as trackerDeploy } from '../../assets/examples/work-tracker/screen.png';
+
+import JsIcon from '../../assets/icons/js';
+import SvgIcon from '../../assets/icons/svg';
+import ReactIcon from '../../assets/icons/react';
+
+const examples = [
+    {
+        title: <ReactIcon style={{ color: '#53C1DE' }} />,
+        imageSrc: resumeScreen,
+        caption: 'Resume'
+    },
+    {
+        title: <JsIcon/>,
+        imageSrc: tableScreen,
+        caption: 'Flight table'
+    },
+    {
+        title: <ReactIcon style={{ color: '#53C1DE' }} />,
+        imageSrc: trackerScreen,
+        caption: 'Work tracker'
+    },
+    {
+        title: <><JsIcon/><SvgIcon/></>,
+        imageSrc: snakeScreen,
+        caption: 'Snake'
+    },
+    {
+        title: <><JsIcon /><SvgIcon />></>,
+        imageSrc: chartScreen,
+        caption: 'Chart'
+    }
+];
+
 const Container = styled.div`
     position: relative;
 
@@ -45,7 +89,7 @@ const Title = styled.div`
 
 const restrictBy = (max = 1, min = 0) => x => Math.max(Math.min(max, x), min);
 
-const ExamplesBlock = ({ innerRef, examples = [] }) => {
+const ExamplesBlock = ({ innerRef }) => {
     const [exampleIndex, setExampleIndex] = useState(0);
 
     const onScroll = () => {

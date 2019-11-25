@@ -7,11 +7,7 @@ import { getFadeInCss } from '../helpers/keyframes';
 import IntroBlock from './intro-block/intro-block';
 import ExamplesBlock from './examples-block/examples-block';
 import background from '../assets/images/background3.jpeg';
-import snakeScreen from '../assets/images/snake-screen.png';
 import HomeIcon from '../assets/icons/home';
-import JsIcon from '../assets/icons/js';
-import SvgIcon from '../assets/icons/svg';
-import ReactIcon from '../assets/icons/react';
 import Gradient from './gradient';
 
 const scenario = {
@@ -63,26 +59,7 @@ const Landing = () => {
             <Container>
                 <FaceBlock scenario={scenario} innerRef={faceRef} />
                 <AboutBlock innerRef={aboutRef} />
-                <ExamplesBlock
-                    innerRef={examplesRef}
-                    examples={[
-                        {
-                            title: <JsIcon />,
-                            imageSrc: snakeScreen,
-                            caption: 'Snake-game'
-                        },
-                        {
-                            title: <SvgIcon />,
-                            imageSrc: snakeScreen,
-                            caption: 'Snake-game'
-                        },
-                        {
-                            title: <ReactIcon style={{ color: '#53C1DE' }} />,
-                            imageSrc: snakeScreen,
-                            caption: 'Snake-game'
-                        }
-                    ]}
-                />
+                <ExamplesBlock innerRef={examplesRef} />
                 <LastBlock ref={lastRef}>
                     <Gradient color="#161616" height="100px" direction="top" />
                 </LastBlock>
