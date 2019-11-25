@@ -68,13 +68,13 @@ const ExamplesBlock = ({ innerRef, examples = [] }) => {
         <Container ref={innerRef}>
             <StickyWrapper>
                 <Description>
-                    {examples.map(({title}) => (
+                    {examples.map(({ title }) => (
                         <Title exampleIndex={exampleIndex}>{title}</Title>
                     ))}
                 </Description>
                 <Laptop maxWidth={80} maxHeight={50} image={examples[exampleIndex].imageSrc} />
                 <Description>
-                    {examples.map(({caption}) => (
+                    {examples.map(({ caption }) => (
                         <Title exampleIndex={exampleIndex}>{caption}</Title>
                     ))}
                 </Description>

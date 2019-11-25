@@ -43,7 +43,6 @@ const AboutBlock = ({ innerRef }) => (
             <Line>Семейное положение: холост</Line>
             <Line>Зарплатные ожидания: xxx</Line>
         </Article>
-        >
     </Container>
 );
 

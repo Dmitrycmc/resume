@@ -77,7 +77,7 @@ const Landing = () => {
                             caption: 'Snake-game'
                         },
                         {
-                            title: <ReactIcon style={{color: '#53C1DE'}} />,
+                            title: <ReactIcon style={{ color: '#53C1DE' }} />,
                             imageSrc: snakeScreen,
                             caption: 'Snake-game'
                         }

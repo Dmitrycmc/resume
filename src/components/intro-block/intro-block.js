@@ -54,7 +54,7 @@ const IntroBlock = ({ scenario }) => (
             made with
         </Title>
         <Edge />
-        <ReactIcon width="200"/>
+        <ReactIcon width="200" />
         <Edge right />
         <Title right width="350px" scenario={scenario}>
             react

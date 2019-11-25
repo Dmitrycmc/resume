@@ -6,6 +6,7 @@ const Container = styled.div`
     position: relative;
 
     width: fit-content;
+    margin: 30px;
 
     color: white;
     font-size: 5em;
