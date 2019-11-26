@@ -1,13 +1,13 @@
 {
   "main.css": "/resume/static/css/main.5ebe7e75.chunk.css",
-  "main.js": "/resume/static/js/main.a343f267.chunk.js",
-  "main.js.map": "/resume/static/js/main.a343f267.chunk.js.map",
+  "main.js": "/resume/static/js/main.cb7c5881.chunk.js",
+  "main.js.map": "/resume/static/js/main.cb7c5881.chunk.js.map",
   "runtime~main.js": "/resume/static/js/runtime~main.30522d0f.js",
   "runtime~main.js.map": "/resume/static/js/runtime~main.30522d0f.js.map",
-  "static/js/2.7631c4b9.chunk.js": "/resume/static/js/2.7631c4b9.chunk.js",
-  "static/js/2.7631c4b9.chunk.js.map": "/resume/static/js/2.7631c4b9.chunk.js.map",
+  "static/js/2.85f86ccf.chunk.js": "/resume/static/js/2.85f86ccf.chunk.js",
+  "static/js/2.85f86ccf.chunk.js.map": "/resume/static/js/2.85f86ccf.chunk.js.map",
   "index.html": "/resume/index.html",
-  "precache-manifest.8cdf8cee056da69229e44c2c48b2bdcb.js": "/resume/precache-manifest.8cdf8cee056da69229e44c2c48b2bdcb.js",
+  "precache-manifest.c0c3a42c2e932f65bb80ad0c5c3e63b2.js": "/resume/precache-manifest.c0c3a42c2e932f65bb80ad0c5c3e63b2.js",
   "service-worker.js": "/resume/service-worker.js",
   "static/css/main.5ebe7e75.chunk.css.map": "/resume/static/css/main.5ebe7e75.chunk.css.map",
   "static/media/background1.jpg": "/resume/static/media/background1.22faaec5.jpg",
@@ -15,5 +15,5 @@
   "static/media/background3.jpeg": "/resume/static/media/background3.df9494bd.jpeg",
   "static/media/index.css": "/resume/static/media/erica-type.29f0ace6.ttf",
   "static/media/laptop.png": "/resume/static/media/laptop.8b2d7f40.png",
-  "static/media/snake-screen.png": "/resume/static/media/snake-screen.43976d1c.png"
+  "static/media/screen.png": "/resume/static/media/screen.f9da559d.png"
 }
