@@ -6,6 +6,9 @@ import Gradient from '../gradient';
 const Container = styled.div`
     position: relative;
 
+    display: flex;
+    align-items: center;
+
     height: 100vh;
 
     font-size: 45px;
@@ -27,7 +30,7 @@ const Line = styled.div`
 
 const Article = styled.div`
     width: fit-content;
-    margin: auto;
+    margin-left: 100px;
 `;
 
 const AboutBlock = ({ innerRef }) => (
