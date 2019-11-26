@@ -7,11 +7,8 @@ import Gradient from '../gradient';
 
 const Container = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
+    align-items: center;
     height: 100vh;
-    padding: 70px 0 0 70px;
 
     background-image: url(${background});
 
@@ -23,6 +20,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width: fit-content;
     padding: 0 30px;
+    margin-left: 100px;
     overflow: hidden;
 
     border-radius: 35px;

@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import Root from './root';
 import './index.css';
 
-window.addEventListener('scroll', e => {e.preventDefault();})
-
-window.onbeforeunload = function() {
+window.onload = function() {
     window.scrollTo(0, 0);
+    setTimeout(() => {
+        document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
+    }, 4000);
+    ReactDOM.render(<Root />, document.getElementById('root'));
 };
-
-ReactDOM.render(<Root />, document.getElementById('root'));
