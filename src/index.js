@@ -7,6 +7,6 @@ window.onload = function() {
     window.scrollTo(0, 0);
     setTimeout(() => {
         document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
-    }, 4000);
+    }, 2500);
     ReactDOM.render(<Root />, document.getElementById('root'));
 };
