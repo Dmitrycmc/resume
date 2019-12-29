@@ -15,6 +15,8 @@ import JsIcon from '../../assets/icons/js';
 import SvgIcon from '../../assets/icons/svg';
 import ReactIcon from '../../assets/icons/react';
 import Links from './links';
+import MongoIcon from '../../assets/icons/mongodb';
+import AjaxIcon from '../../assets/icons/ajax';
 
 const examples = [
     {
@@ -25,7 +27,8 @@ const examples = [
         caption: 'Resume'
     },
     {
-        title: <JsIcon />,
+        title: <><JsIcon />
+            <AjaxIcon /></>,
         imageSrc: tableScreen,
         deploy: tableDeploy,
         source: tableSource,
@@ -43,6 +46,8 @@ const examples = [
             <>
                 <JsIcon />
                 <SvgIcon />
+                <AjaxIcon />
+                <MongoIcon />
             </>
         ),
         imageSrc: snakeScreen,
