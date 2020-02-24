@@ -28,6 +28,14 @@ const Wrapper = styled.div`
 
     background-color: rgb(0, 0, 0, 0.5);
 
+    @media (max-width: 800px) {
+        border-radius: 15px;
+    }
+
+    @media (max-height: 500px) {
+        border-radius: 5px;
+    }
+
     ${props => getFadeInCss('opacity: 0;', 'opacity: 1;', props.scenario.TITLE_FADE_IN, props.scenario.TITLE_DELAY)}
 `;
 

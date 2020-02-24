@@ -27,8 +27,12 @@ const examples = [
         caption: 'Resume'
     },
     {
-        title: <><JsIcon />
-            <AjaxIcon /></>,
+        title: (
+            <>
+                <JsIcon />
+                <AjaxIcon />
+            </>
+        ),
         imageSrc: tableScreen,
         deploy: tableDeploy,
         source: tableSource,

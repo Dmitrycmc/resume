@@ -38,7 +38,7 @@ const MenuItem = styled.li`
 
     color: ${props => (props.active ? 'gray' : 'white')};
 
-    font-size: 20px;
+    font-size: 1em;
     font-family: Opensans, sans-serif;
     text-transform: uppercase;
 
@@ -47,6 +47,10 @@ const MenuItem = styled.li`
     transition: color 200ms;
 
     user-select: none;
+
+    @media (max-width: 800px) {
+        font-size: 0.8em;
+    }
 `;
 
 const getBackgroundState = () => {
