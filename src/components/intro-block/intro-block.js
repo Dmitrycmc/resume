@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 
     color: white;
 
-    font-size: 5em;
     font-family: 'Arial Black', sans-serif;
     text-transform: uppercase;
 
@@ -24,11 +23,20 @@ const Title = styled.div`
     position: relative;
     ${props => `left: ${props.right ? '-' : ''}50px`}
 
+    font-size: 5em;
     white-space: nowrap;
 
     overflow: hidden;
     display: flex;
     justify-content: ${props => (props.right ? 'flex-end' : 'flex-start')};
+
+    @media (max-width: 800px) {
+        font-size: 1.3em;
+    }
+
+    @media (max-height: 500px) {
+        font-size: 2.5em;
+    }
 
     ${props =>
         getFadeInCss(

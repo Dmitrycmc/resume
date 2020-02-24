@@ -11,7 +11,6 @@ const Container = styled.div`
 
     height: 100vh;
 
-    font-size: 45px;
     font-family: 'Erica Type', sans-serif;
 
     background-image: url(${background2});
@@ -20,17 +19,38 @@ const Container = styled.div`
     background-size: cover;
 
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
+
+    @media (max-width: 800px) {
+        background-position-x: center;
+    }
 `;
 
 const Line = styled.div`
     width: fit-content;
 
     border-bottom: 2px solid black;
+
+    font-size: 1.6em;
+    white-space: nowrap;
+
+    @media (max-width: 800px) {
+        margin: 20px 0;
+
+        font-size: 2em;
+    }
+
+    @media (max-height: 500px) {
+        font-size: 1.2em;
+    }
 `;
 
 const Article = styled.div`
     width: fit-content;
     margin-left: 100px;
+
+    @media (max-width: 800px) {
+        margin-left: 30px;
+    }
 `;
 
 const AboutBlock = ({ innerRef }) => (
@@ -43,8 +63,7 @@ const AboutBlock = ({ innerRef }) => (
             <Line>Год рождения: 1995</Line>
             <Line>Пол: мужской</Line>
             <Line>Город: Москва</Line>
-            <Line>Семейное положение: холост</Line>
-            <Line>Зарплатные ожидания: xxx</Line>
+            <Line>З-п ожидания: xxx</Line>
         </Article>
     </Container>
 );

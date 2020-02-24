@@ -29,6 +29,8 @@ const Wrapper = styled.div`
     background-color: rgb(0, 0, 0, 0.5);
 
     @media (max-width: 800px) {
+        margin: auto;
+
         border-radius: 15px;
     }
 
