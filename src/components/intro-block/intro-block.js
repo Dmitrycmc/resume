@@ -22,9 +22,10 @@ const Wrapper = styled.div`
 const Title = styled.div`
     position: relative;
     ${props => `left: ${props.right ? '-' : ''}50px`}
-
-    font-size: 5em;
+    font-size: 3em;
     white-space: nowrap;
+
+    z-index: 50;
 
     overflow: hidden;
     display: flex;
@@ -41,30 +42,39 @@ const Title = styled.div`
     ${props =>
         getFadeInCss(
             'width: 0;',
-            'width: ' + props.width,
+            `
+                width: ${props.width};
+            `,
             props.scenario.LOADING_FADE_IN,
             props.scenario.LOADING_DELAY
         )}
 `;
 
 const Edge = styled.div`
-    z-index: 10;
+    z-index: 100;
 
+    margin: 0 -5px;
     width: 50px;
-    height: 1em;
+    height: 150px;
 
     ${props => `background: linear-gradient(to ${props.right ? 'right' : 'left'}, black, transparent)`}
 `;
 
 const IntroBlock = ({ scenario }) => (
     <Wrapper>
-        <Title width="570px" scenario={scenario}>
+        <Title width="380px" scenario={scenario}>
             made with
         </Title>
         <Edge />
-        <ReactIcon width="200" />
+        <ReactIcon
+            style={{
+                background: 'black',
+                zIndex: 100
+            }}
+            width="200"
+        />
         <Edge right />
-        <Title right width="350px" scenario={scenario}>
+        <Title right width="260px" scenario={scenario}>
             react
         </Title>
     </Wrapper>
