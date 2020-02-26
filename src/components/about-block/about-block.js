@@ -33,12 +33,6 @@ const Line = styled.div`
     font-size: 1.6em;
     white-space: nowrap;
 
-    @media (max-width: 800px) {
-        margin: 20px 0;
-
-        font-size: 2em;
-    }
-
     @media (max-height: 500px) {
         font-size: 1.2em;
     }

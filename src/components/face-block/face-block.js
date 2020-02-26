@@ -51,7 +51,13 @@ const Wrapper = styled.div`
 
 const StyledLink = styled.a`
     z-index: 100;
-    @media (max-height: 500px) {
+    @media (max-width: 800px) {
+        svg {
+            height: 120px;
+        }
+    }
+
+@media (max-height: 500px) {
         svg {
             height: 100px;
         }

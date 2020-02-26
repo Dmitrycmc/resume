@@ -37,9 +37,10 @@ const MenuItem = styled.li`
     margin: 0 20px;
 
     color: ${props => (props.active ? 'gray' : 'white')};
-
     font-size: 1em;
     font-family: Opensans, sans-serif;
+
+    text-align: center;
     text-transform: uppercase;
 
     cursor: pointer;
