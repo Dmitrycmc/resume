@@ -36,7 +36,7 @@ const Title = styled.div`
     }
 
     @media (max-height: 500px) {
-        font-size: 2.5em;
+        font-size: 1.8em;
     }
 
     ${props =>
