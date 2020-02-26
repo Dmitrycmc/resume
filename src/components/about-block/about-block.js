@@ -63,6 +63,8 @@ const AboutBlock = ({ innerRef }) => (
             <Line>Год рождения: 1995</Line>
             <Line>Пол: мужской</Line>
             <Line>Город: Москва</Line>
+            <Line>Образование: МГУ, ВМК (2017г)</Line>
+            <Line>Опыт работы: Iceberg Sport Analytics (1.5г)</Line>
             <Line>З-п ожидания: 130т.р. на руки</Line>
         </Article>
     </Container>
