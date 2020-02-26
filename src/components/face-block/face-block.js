@@ -4,6 +4,7 @@ import background from '../../assets/images/background1.jpg';
 import Title from './title';
 import { getFadeInCss } from '../../helpers/keyframes';
 import Gradient from '../gradient';
+import TelegramIcon from '../../assets/icons/telegram';
 
 const Container = styled.div`
     display: flex;
@@ -50,6 +51,9 @@ const FaceBlock = ({ scenario, innerRef }) => (
                 <Title order={2}>Frontend</Title>
                 <Title order={3}>Developer</Title>
             </Wrapper>
+            <a href="https://telegram.me/Lytov" target="_blank" rel="noopener noreferrer" style={{ zIndex: 100 }}>
+                <TelegramIcon />
+            </a>
         </Container>
     </div>
 );
