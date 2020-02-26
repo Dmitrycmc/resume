@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ReactIcon = props => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="60" {...props}>
+    <div title="SVG" ><svg xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-width="2" viewBox="0 0 300 300" width="60" {...props}>
         <defs>
             <g id="SVG" fill="#ffffff" transform="scale(2) translate(20,79)">
                 <path
@@ -41,7 +41,7 @@ const ReactIcon = props => (
         <use href="#svgstar" />
         <use href="#base" opacity="0.85" />
         <use href="#SVG" />
-    </svg>
+    </svg></div>
 );
 
 export default ReactIcon;

@@ -17,20 +17,21 @@ import ReactIcon from '../../assets/icons/react';
 import Links from './links';
 import MongoIcon from '../../assets/icons/mongodb';
 import AjaxIcon from '../../assets/icons/ajax';
+import CanvasIcon from "../../assets/icons/canvas";
 
 const examples = [
     {
-        title: <ReactIcon style={{ color: '#53C1DE' }} />,
+        tools: <ReactIcon style={{ color: '#53C1DE', margin: '0 10px' }} />,
         imageSrc: resumeScreen,
         deploy: resumeDeploy,
         source: resumeSource,
         caption: 'Resume'
     },
     {
-        title: (
+        tools: (
             <>
-                <JsIcon />
-                <AjaxIcon />
+                <JsIcon style={{margin: '0 10px'}}/>
+                <AjaxIcon style={{margin: '0 10px'}} />
             </>
         ),
         imageSrc: tableScreen,
@@ -39,19 +40,19 @@ const examples = [
         caption: 'Flight table'
     },
     {
-        title: <ReactIcon style={{ color: '#53C1DE' }} />,
+        tools: <ReactIcon style={{ color: '#53C1DE',margin: '0 10px' }} />,
         imageSrc: trackerScreen,
         deploy: trackerDeploy,
         source: trackerSource,
         caption: 'Work tracker'
     },
     {
-        title: (
+        tools: (
             <>
-                <JsIcon />
-                <SvgIcon />
-                <AjaxIcon />
-                <MongoIcon />
+                <JsIcon style={{margin: '0 10px'}}/>
+                <CanvasIcon style={{margin: '0 10px'}}/>
+                <AjaxIcon style={{margin: '0 10px'}}/>
+                <MongoIcon style={{margin: '0 10px'}}/>
             </>
         ),
         imageSrc: snakeScreen,
@@ -60,10 +61,10 @@ const examples = [
         caption: 'Snake'
     },
     {
-        title: (
+        tools: (
             <>
-                <JsIcon />
-                <SvgIcon />>
+                <JsIcon style={{margin: '0 10px'}}/>
+                <SvgIcon style={{margin: '0 10px'}}/>
             </>
         ),
         imageSrc: chartScreen,
@@ -139,10 +140,9 @@ const ExamplesBlock = ({ innerRef }) => {
         <Container ref={innerRef}>
             <StickyWrapper>
                 <Description>
-                    {examples.map(({ title, caption }) => (
+                    {examples.map(({ tools }) => (
                         <Title exampleIndex={exampleIndex}>
-                            {title}
-                            {caption}
+                            {tools}
                         </Title>
                     ))}
                 </Description>

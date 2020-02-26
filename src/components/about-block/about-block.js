@@ -63,7 +63,7 @@ const AboutBlock = ({ innerRef }) => (
             <Line>Год рождения: 1995</Line>
             <Line>Пол: мужской</Line>
             <Line>Город: Москва</Line>
-            <Line>З-п ожидания: xxx</Line>
+            <Line>З-п ожидания: 130т.р. на руки</Line>
         </Article>
     </Container>
 );
