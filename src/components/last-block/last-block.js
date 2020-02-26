@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import Gradient from '../gradient';
-import background from "../../assets/images/background3.jpeg";
+import background from '../../assets/images/background3.jpeg';
 
 const Container = styled.div`
     position: relative;
@@ -28,9 +28,9 @@ const Container = styled.div`
 const Line = styled.div`
     width: fit-content;
 
+    color: white;
+
     font-size: 1.6em;
-    white-space: nowrap;
-color: white;
 
     @media (max-width: 800px) {
         margin: 20px 0;

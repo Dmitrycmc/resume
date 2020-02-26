@@ -95,6 +95,11 @@ const StickyWrapper = styled.div`
     height: 100vh;
 
     padding: 70px 0 0 0;
+
+    @media (max-height: 500px) {
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto;
+    }
 `;
 
 const Description = styled.div`
@@ -113,6 +118,10 @@ const Title = styled.div`
     align-items: center;
 
     transition: left 500ms;
+
+    @media (max-height: 500px) {
+        flex-direction: column;
+    }
 `;
 
 const restrictBy = (max = 1, min = 0) => x => Math.max(Math.min(max, x), min);

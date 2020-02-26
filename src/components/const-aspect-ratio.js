@@ -4,6 +4,9 @@ import styled from 'styled-components/macro';
 const Wrapper = styled.div`
     position: relative;
 
+    z-index: 1000;
+
+    align-self: center;
     width: ${props => props.maxWidth}vw;
     max-width: ${props => props.maxHeight * props.ratio}vh;
     height: ${props => props.maxWidth / props.ratio}vw;

@@ -7,7 +7,7 @@ import { getFadeInCss } from '../helpers/keyframes';
 import IntroBlock from './intro-block/intro-block';
 import ExamplesBlock from './examples-block/examples-block';
 import HomeIcon from '../assets/icons/home';
-import LastBlock from "./last-block/last-block";
+import LastBlock from './last-block/last-block';
 
 const scenario = {
     LOADING_DELAY: 500,
@@ -49,7 +49,7 @@ const Landing = () => {
                 <FaceBlock scenario={scenario} innerRef={faceRef} />
                 <AboutBlock innerRef={aboutRef} />
                 <ExamplesBlock innerRef={examplesRef} />
-                <LastBlock innerRef={lastRef}/>
+                <LastBlock innerRef={lastRef} />
             </Container>
         </>
     );
