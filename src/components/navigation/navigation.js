@@ -49,7 +49,7 @@ const MenuItem = styled.li`
     user-select: none;
 
     @media (max-width: 800px) {
-        font-size: 0.8em;
+        font-size: 0.5em;
     }
 `;
 
@@ -87,14 +87,6 @@ const Navigation = ({ scenario, blocks }) => {
 
     return (
         <Container scenario={scenario} background={background}>
-            {/*
-            <MenuItem onClick={() => scrollTo(faceRef)}>Старт</MenuItem>
-            <MenuItem onClick={() => scrollTo(aboutRef)}>Обо мне</MenuItem>
-            <MenuItem>Навыки</MenuItem>
-            <MenuItem>Образование и опыт</MenuItem>
-            <MenuItem onClick={() => scrollTo(examplesRef)}>Примеры</MenuItem>
-            <MenuItem>Контакты</MenuItem>
-            */}
             {blocks.map(({ ref, title }, i) => {
                 const active = highlightedIndex === i;
                 const handleClick = useCallback(() => scrollTo(ref), [ref]);

@@ -6,9 +6,8 @@ import styled from 'styled-components/macro';
 import { getFadeInCss } from '../helpers/keyframes';
 import IntroBlock from './intro-block/intro-block';
 import ExamplesBlock from './examples-block/examples-block';
-import background from '../assets/images/background3.jpeg';
 import HomeIcon from '../assets/icons/home';
-import Gradient from './gradient';
+import LastBlock from "./last-block/last-block";
 
 const scenario = {
     LOADING_DELAY: 500,
@@ -28,16 +27,6 @@ const Container = styled.div`
     ${getFadeInCss('top: 100vh;', 'top: 0;', scenario.FACE_BLOCK_FADE_IN, scenario.FACE_BLOCK_DELAY)}
 `;
 
-const LastBlock = styled.div`
-    position: relative;
-
-    height: 100vh;
-
-    background-color: #161616;
-    background-image: url(${background});
-    background-size: cover;
-`;
-
 const Landing = () => {
     const faceRef = useRef();
     const aboutRef = useRef();
@@ -50,9 +39,9 @@ const Landing = () => {
                 scenario={scenario}
                 blocks={[
                     { ref: faceRef, title: <HomeIcon /> },
-                    { ref: aboutRef, title: 'о себе' },
-                    { ref: examplesRef, title: 'примеры' },
-                    { ref: lastRef, title: 'конец' }
+                    { ref: aboutRef, title: 'О себе' },
+                    { ref: examplesRef, title: 'Примеры работ' },
+                    { ref: lastRef, title: 'Характеристика' }
                 ]}
             />
             <IntroBlock scenario={scenario} />
@@ -60,9 +49,7 @@ const Landing = () => {
                 <FaceBlock scenario={scenario} innerRef={faceRef} />
                 <AboutBlock innerRef={aboutRef} />
                 <ExamplesBlock innerRef={examplesRef} />
-                <LastBlock ref={lastRef}>
-                    <Gradient color="#161616" height="100px" direction="top" />
-                </LastBlock>
+                <LastBlock innerRef={lastRef}/>
             </Container>
         </>
     );

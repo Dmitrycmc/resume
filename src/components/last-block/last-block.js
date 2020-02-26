@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import background2 from '../../assets/images/background2.jpg';
 import Gradient from '../gradient';
+import background from "../../assets/images/background3.jpeg";
 
 const Container = styled.div`
     position: relative;
@@ -13,7 +13,7 @@ const Container = styled.div`
 
     font-family: 'Erica Type', sans-serif;
 
-    background-image: url(${background2});
+    background-image: url(${background});
 
     background-position-x: right;
     background-size: cover;
@@ -28,10 +28,9 @@ const Container = styled.div`
 const Line = styled.div`
     width: fit-content;
 
-    border-bottom: 2px solid black;
-
     font-size: 1.6em;
     white-space: nowrap;
+color: white;
 
     @media (max-width: 800px) {
         margin: 20px 0;
@@ -47,27 +46,21 @@ const Line = styled.div`
 const Article = styled.div`
     width: fit-content;
     margin-left: 100px;
-
     @media (max-width: 800px) {
         margin-left: 30px;
     }
 `;
 
-const AboutBlock = ({ innerRef }) => (
+const LastBlock = ({ innerRef }) => (
     <Container ref={innerRef}>
-        <Gradient color="#dedede" height="100px" direction="bottom" />
+        <Gradient color="#161616" height="100px" direction="top" />
         <Article>
-            <Line>Имя: Дмитрий</Line>
-            <Line>Фамилия: Лытов</Line>
-            <Line>Отчество: Андреевич</Line>
-            <Line>Год рождения: 1995</Line>
-            <Line>Пол: мужской</Line>
-            <Line>Город: Москва</Line>
-            <Line>Образование: МГУ, ВМК (2018г)</Line>
-            <Line>Опыт работы: Iceberg Sport Analytics (1.5г)</Line>
-            <Line>З-п ожидания: 130т.р. на руки</Line>
+            <Line>Трудолюбивый, ответственный, инициативный.</Line>
+            <Line>Языки программирования: C, C#, C++, JS</Line>
+            <Line>Для своих проектов писал backend на node.js</Line>
+            <Line>Система контроля версий: git</Line>
         </Article>
     </Container>
 );
 
-export default AboutBlock;
+export default LastBlock;
