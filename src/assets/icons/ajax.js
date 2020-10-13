@@ -5,8 +5,6 @@ const AjaxIcon = props => (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="80"
-            stroke="white"
-            strokeWidth="2"
             viewBox="0 0 397.5 191.25"
             {...props}
         >

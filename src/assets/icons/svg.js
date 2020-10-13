@@ -4,8 +4,6 @@ const ReactIcon = props => (
     <div title="SVG">
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            stroke="white"
-            strokeWidth="2"
             viewBox="0 0 300 300"
             width="60"
             {...props}
@@ -34,7 +32,7 @@ const ReactIcon = props => (
                 fill="#000"
                 d="M8.5,150 H291.5 V250 C291.5,273.5 273.5,291.5 250,291.5 H50 C26.5,291.5 8.5,273.5 8.5,250 Z"
             />
-            <g strokeWidth="38.0086" stroke="#000">
+            <g>
                 <g id="svgstar" transform="translate(150, 150)">
                     <path
                         id="svgbar"

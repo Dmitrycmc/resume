@@ -18,8 +18,6 @@ const Container = styled.div`
     background-position-x: right;
     background-size: cover;
 
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.4);
-
     @media (max-width: 800px) {
         background-position-x: center;
     }
