@@ -2,12 +2,7 @@ import React from 'react';
 
 const AjaxIcon = props => (
     <div title="Ajax">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="80"
-            viewBox="0 0 397.5 191.25"
-            {...props}
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" viewBox="0 0 397.5 191.25" {...props}>
             <g transform="translate(0,2)">
                 <path
                     fill="#308bc9"

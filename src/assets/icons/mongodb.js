@@ -2,12 +2,7 @@ import React from 'react';
 
 const MongoIcon = props => (
     <div title="MongoDB">
-        <svg
-            height="60"
-            viewBox="0 0 80 146"
-            xmlns="http://www.w3.org/2000/svg"
-            {...props}
-        >
+        <svg height="60" viewBox="0 0 80 146" xmlns="http://www.w3.org/2000/svg" {...props}>
             <g fill="none">
                 <g>
                     <path

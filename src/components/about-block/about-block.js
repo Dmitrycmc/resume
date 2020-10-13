@@ -28,14 +28,15 @@ const Container = styled.div`
 
 const Line = styled.div`
     width: fit-content;
-  margin-bottom: 10px;
-    text-decoration: underline;
+    margin-bottom: 10px;
 
     font-size: 1.6em;
+    text-decoration: underline;
 
     @media (max-height: 600px) {
+        margin-bottom: 5px;
+
         font-size: 1.2em;
-  margin-bottom: 5px;
     }
 `;
 
