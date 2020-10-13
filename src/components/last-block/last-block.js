@@ -26,10 +26,9 @@ const Container = styled.div`
 `;
 
 const Line = styled.div`
-    width: fit-content;
-
+    width: 700px;
     color: white;
-
+margin-bottom: 15px;
     font-size: 1.6em;
 
     @media (max-width: 800px) {
@@ -55,10 +54,11 @@ const LastBlock = ({ innerRef }) => (
     <Container ref={innerRef}>
         <Gradient color="#161616" height="100px" direction="top" />
         <Article>
-            <Line>Трудолюбивый, ответственный, инициативный.</Line>
-            <Line>Языки программирования: C, C#, C++, JS</Line>
-            <Line>Для своих проектов писал backend на node.js</Line>
-            <Line>Система контроля версий: git</Line>
+            <Line>Работаю на результат, люблю чистый код, code review, требователен к каждой мелочи в UI</Line>
+            <Line>Изучаю backend, чтобы вырасти до full stack и иметь возможность брать небольшие задачи целиком. </Line>
+            <Line>Языки программирования: JS, Java, семейство C</Line>
+            <Line>Технологии: ES6, SPA, Ajax, REST API, Canvas, Svg, D3, React, Redux, Styled components, NPM, Maven, SQL, MongoDB</Line>
+            <Line>VCS: Git</Line>
         </Article>
     </Container>
 );
