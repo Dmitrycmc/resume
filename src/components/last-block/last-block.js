@@ -6,9 +6,10 @@ import background from '../../assets/images/background3.jpeg';
 const Container = styled.div`
     position: relative;
 
+    padding: 30px 0;
     display: flex;
     align-items: center;
-
+min-height: 400px;
     height: 100vh;
 
     font-family: 'Erica Type', sans-serif;
@@ -24,15 +25,13 @@ const Container = styled.div`
 `;
 
 const Line = styled.div`
-    width: 700px;
+    max-width: 700px;
     color: white;
 margin-bottom: 15px;
     font-size: 1.6em;
 
     @media (max-width: 800px) {
         margin: 20px 0;
-
-        font-size: 2em;
     }
 
     @media (max-height: 500px) {
@@ -43,8 +42,8 @@ margin-bottom: 15px;
 const Article = styled.div`
     width: fit-content;
     margin-left: 100px;
-    @media (max-width: 800px) {
-        margin-left: 30px;
+    @media (max-width: 800px) { 
+        margin: 0 30px;
     }
 `;
 
