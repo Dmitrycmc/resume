@@ -4,9 +4,12 @@ import background from '../../assets/images/background1.jpg';
 import Title from './title';
 import { getFadeInCss } from '../../helpers/keyframes';
 import Gradient from '../gradient';
+import TelegramIcon from '../../assets/icons/telegram';
 
 const Container = styled.div`
     display: flex;
+
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
 
@@ -15,12 +18,19 @@ const Container = styled.div`
     background-position-x: center;
     background-size: cover;
     background-attachment: fixed;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+
+    @media (max-height: 500px) {
+        border-radius: 5px;
+    }
 `;
 
 const Wrapper = styled.div`
     width: fit-content;
     padding: 0 30px;
-    margin-left: 100px;
     overflow: hidden;
 
     border-radius: 35px;
@@ -29,8 +39,6 @@ const Wrapper = styled.div`
     background-color: rgb(0, 0, 0, 0.5);
 
     @media (max-width: 800px) {
-        margin: auto;
-
         border-radius: 15px;
     }
 
@@ -39,6 +47,21 @@ const Wrapper = styled.div`
     }
 
     ${props => getFadeInCss('opacity: 0;', 'opacity: 1;', props.scenario.TITLE_FADE_IN, props.scenario.TITLE_DELAY)}
+`;
+
+const StyledLink = styled.a`
+    z-index: 100;
+    @media (max-width: 800px) {
+        svg {
+            height: 120px;
+        }
+    }
+
+    @media (max-height: 500px) {
+        svg {
+            height: 100px;
+        }
+    }
 `;
 
 const FaceBlock = ({ scenario, innerRef }) => (
@@ -50,6 +73,9 @@ const FaceBlock = ({ scenario, innerRef }) => (
                 <Title order={2}>Frontend</Title>
                 <Title order={3}>Developer</Title>
             </Wrapper>
+            <StyledLink href="https://telegram.me/Lytov" target="_blank" rel="noopener noreferrer">
+                <TelegramIcon />
+            </StyledLink>
         </Container>
     </div>
 );

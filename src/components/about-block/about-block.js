@@ -33,12 +33,6 @@ const Line = styled.div`
     font-size: 1.6em;
     white-space: nowrap;
 
-    @media (max-width: 800px) {
-        margin: 20px 0;
-
-        font-size: 2em;
-    }
-
     @media (max-height: 500px) {
         font-size: 1.2em;
     }
@@ -63,7 +57,9 @@ const AboutBlock = ({ innerRef }) => (
             <Line>Год рождения: 1995</Line>
             <Line>Пол: мужской</Line>
             <Line>Город: Москва</Line>
-            <Line>З-п ожидания: xxx</Line>
+            <Line>Образование: бакалавриат МГУ, ВМК (2018г)</Line>
+            <Line>Опыт работы: Iceberg Sport Analytics (2.5г)</Line>
+            <Line>З-п ожидания: 200т.р. на руки</Line>
         </Article>
     </Container>
 );

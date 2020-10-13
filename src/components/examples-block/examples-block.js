@@ -14,23 +14,24 @@ import { source as trackerSource, deploy as trackerDeploy } from '../../assets/e
 import JsIcon from '../../assets/icons/js';
 import SvgIcon from '../../assets/icons/svg';
 import ReactIcon from '../../assets/icons/react';
-import Links from './links';
+import Link from './link';
 import MongoIcon from '../../assets/icons/mongodb';
 import AjaxIcon from '../../assets/icons/ajax';
+import CanvasIcon from '../../assets/icons/canvas';
 
 const examples = [
     {
-        title: <ReactIcon style={{ color: '#53C1DE' }} />,
+        tools: <ReactIcon style={{ color: '#53C1DE', margin: '0 10px' }} />,
         imageSrc: resumeScreen,
         deploy: resumeDeploy,
         source: resumeSource,
         caption: 'Resume'
     },
     {
-        title: (
+        tools: (
             <>
-                <JsIcon />
-                <AjaxIcon />
+                <JsIcon style={{ margin: '0 10px' }} />
+                <AjaxIcon style={{ margin: '0 10px' }} />
             </>
         ),
         imageSrc: tableScreen,
@@ -39,19 +40,19 @@ const examples = [
         caption: 'Flight table'
     },
     {
-        title: <ReactIcon style={{ color: '#53C1DE' }} />,
+        tools: <ReactIcon style={{ color: '#53C1DE', margin: '0 10px' }} />,
         imageSrc: trackerScreen,
         deploy: trackerDeploy,
         source: trackerSource,
         caption: 'Work tracker'
     },
     {
-        title: (
+        tools: (
             <>
-                <JsIcon />
-                <SvgIcon />
-                <AjaxIcon />
-                <MongoIcon />
+                <JsIcon style={{ margin: '0 10px' }} />
+                <CanvasIcon style={{ margin: '0 10px' }} />
+                <AjaxIcon style={{ margin: '0 10px' }} />
+                <MongoIcon style={{ margin: '0 10px' }} />
             </>
         ),
         imageSrc: snakeScreen,
@@ -60,10 +61,10 @@ const examples = [
         caption: 'Snake'
     },
     {
-        title: (
+        tools: (
             <>
-                <JsIcon />
-                <SvgIcon />>
+                <JsIcon style={{ margin: '0 10px' }} />
+                <SvgIcon style={{ margin: '0 10px' }} />
             </>
         ),
         imageSrc: chartScreen,
@@ -94,6 +95,11 @@ const StickyWrapper = styled.div`
     height: 100vh;
 
     padding: 70px 0 0 0;
+
+    @media (max-height: 500px) {
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto;
+    }
 `;
 
 const Description = styled.div`
@@ -112,6 +118,10 @@ const Title = styled.div`
     align-items: center;
 
     transition: left 500ms;
+
+    @media (max-height: 500px) {
+        flex-direction: column;
+    }
 `;
 
 const restrictBy = (max = 1, min = 0) => x => Math.max(Math.min(max, x), min);
@@ -139,18 +149,15 @@ const ExamplesBlock = ({ innerRef }) => {
         <Container ref={innerRef}>
             <StickyWrapper>
                 <Description>
-                    {examples.map(({ title, caption }) => (
-                        <Title exampleIndex={exampleIndex}>
-                            {title}
-                            {caption}
-                        </Title>
+                    {examples.map(({ tools }) => (
+                        <Title exampleIndex={exampleIndex}>{tools}</Title>
                     ))}
                 </Description>
                 <Laptop maxWidth={80} maxHeight={50} image={examples[exampleIndex].imageSrc} />
                 <Description>
                     {examples.map(({ deploy, source }) => (
                         <Title exampleIndex={exampleIndex}>
-                            <Links deploy={deploy} source={source} />
+                            <Link deploy={deploy} source={source} />
                         </Title>
                     ))}
                 </Description>

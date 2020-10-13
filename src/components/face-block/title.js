@@ -5,7 +5,7 @@ const Title = styled.div`
     position: relative;
 
     width: fit-content;
-    margin: 30px;
+    margin: 10px 30px;
 
     color: white;
     font-size: 5em;
