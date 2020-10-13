@@ -7,7 +7,7 @@ const ReactIcon = props => (
             viewBox="0 0 630 630"
             width="60"
             stroke="white"
-            stroke-width="8"
+            strokeWidth="8"
             {...props}
         >
             <rect width="630" height="630" fill="#f7df1e" />

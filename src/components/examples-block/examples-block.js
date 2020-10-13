@@ -149,14 +149,14 @@ const ExamplesBlock = ({ innerRef }) => {
         <Container ref={innerRef}>
             <StickyWrapper>
                 <Description>
-                    {examples.map(({ tools }) => (
-                        <Title exampleIndex={exampleIndex}>{tools}</Title>
+                    {examples.map(({ tools, caption }) => (
+                        <Title exampleIndex={exampleIndex} key={caption}>{tools}</Title>
                     ))}
                 </Description>
                 <Laptop maxWidth={80} maxHeight={50} image={examples[exampleIndex].imageSrc} />
                 <Description>
-                    {examples.map(({ deploy, source }) => (
-                        <Title exampleIndex={exampleIndex}>
+                    {examples.map(({ deploy, source, caption }) => (
+                        <Title exampleIndex={exampleIndex} key={caption} >
                             <Link deploy={deploy} source={source} />
                         </Title>
                     ))}

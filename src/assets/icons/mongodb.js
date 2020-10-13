@@ -6,7 +6,7 @@ const MongoIcon = props => (
             height="60"
             viewBox="0 0 80 146"
             stroke="white"
-            stroke-width="1"
+            strokeWidth="1"
             xmlns="http://www.w3.org/2000/svg"
             {...props}
         >

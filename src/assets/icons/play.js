@@ -4,7 +4,7 @@ const PlayIcon = props => (
     <div title="Play">
         <svg
             stroke="white"
-            stroke-width="4"
+            strokeWidth="4"
             xmlns="http://www.w3.org/2000/svg"
             width="60"
             height="60"

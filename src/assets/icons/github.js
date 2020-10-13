@@ -4,7 +4,7 @@ const GithubIcon = props => (
     <div title="Code">
         <svg
             stroke="white"
-            stroke-width="0.2"
+            strokeWidth="0.2"
             xmlns="http://www.w3.org/2000/svg"
             width="60"
             height="60"
