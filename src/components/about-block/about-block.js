@@ -10,6 +10,7 @@ const Container = styled.div`
     align-items: center;
 
     height: 100vh;
+    min-height: 450px;
 
     font-family: 'Erica Type', sans-serif;
 
@@ -27,14 +28,14 @@ const Container = styled.div`
 
 const Line = styled.div`
     width: fit-content;
-
-    border-bottom: 2px solid black;
+  margin-bottom: 10px;
+    text-decoration: underline;
 
     font-size: 1.6em;
-    white-space: nowrap;
 
-    @media (max-height: 500px) {
+    @media (max-height: 600px) {
         font-size: 1.2em;
+  margin-bottom: 5px;
     }
 `;
 
@@ -57,8 +58,10 @@ const AboutBlock = ({ innerRef }) => (
             <Line>Год рождения: 1995</Line>
             <Line>Пол: мужской</Line>
             <Line>Город: Москва</Line>
-            <Line>Образование: бакалавриат МГУ, ВМК (2018г)</Line>
-            <Line>Опыт работы: Iceberg Sport Analytics (2.5г)</Line>
+            <Line>Образование: бакалавриат&nbsp;МГУ,&nbsp;ВМК (2018г)</Line>
+            <Line>Опыт работы:</Line>
+            <Line>Iceberg&nbsp;Sport&nbsp;Analytics (Junior&nbsp;frontend&nbsp;dev.) 2018г.</Line>
+            <Line>Iceberg&nbsp;Sport&nbsp;Analytics (Lead&nbsp;frontend&nbsp;dev.) 2019&nbsp;-&nbsp;2020г.</Line>
             <Line>З-п ожидания: 200т.р. на руки</Line>
         </Article>
     </Container>

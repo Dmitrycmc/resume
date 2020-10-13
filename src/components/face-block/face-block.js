@@ -19,10 +19,6 @@ const Container = styled.div`
     background-size: cover;
     background-attachment: fixed;
 
-    @media (max-width: 800px) {
-        flex-direction: column;
-    }
-
     @media (max-height: 500px) {
         border-radius: 5px;
     }
