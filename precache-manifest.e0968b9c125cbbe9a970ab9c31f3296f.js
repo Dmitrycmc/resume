@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/screen.f9da559d.png"
   },
   {
-    "revision": "9154a66237b25d84bfc1",
+    "revision": "afdb73fdb94181813bf2",
     "url": "/resume/static/css/main.b91ac38a.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/resume/static/media/screen.43976d1c.png"
   },
   {
-    "revision": "9154a66237b25d84bfc1",
-    "url": "/resume/static/js/main.e0b49910.chunk.js"
+    "revision": "afdb73fdb94181813bf2",
+    "url": "/resume/static/js/main.ca53032f.chunk.js"
   },
   {
     "revision": "1386dd119e701c30036380dbd9bed320",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/resume/static/media/erica-type.29f0ace6.ttf"
   },
   {
-    "revision": "90f8438a17d3e987553b8c534fef9751",
+    "revision": "37f852517f9b23cbd548dae4c4a92646",
     "url": "/resume/index.html"
   }
 ];
