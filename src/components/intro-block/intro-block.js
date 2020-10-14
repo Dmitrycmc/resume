@@ -31,12 +31,12 @@ const Title = styled.div`
     display: flex;
     justify-content: ${props => (props.right ? 'flex-end' : 'flex-start')};
 
-    @media (max-width: 800px) {
+    @media (max-width: 830px) {
         font-size: 1.3em;
     }
 
-    @media (max-height: 500px) {
-        font-size: 1.8em;
+    @media (max-width: 430px) {
+        font-size: 0.7em;
     }
 
     ${props =>

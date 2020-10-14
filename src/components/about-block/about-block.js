@@ -10,7 +10,9 @@ const Container = styled.div`
     align-items: center;
 
     height: 100vh;
-    min-height: 450px;
+    min-height: 500px;
+
+    padding: 30px 0;
 
     font-family: 'Erica Type', sans-serif;
 
@@ -33,7 +35,7 @@ const Line = styled.div`
     font-size: 1.6em;
     text-decoration: underline;
 
-    @media (max-height: 600px) {
+    @media (max-width: 800px) {
         margin-bottom: 5px;
 
         font-size: 1.2em;

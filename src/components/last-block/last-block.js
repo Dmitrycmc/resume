@@ -34,9 +34,7 @@ const Line = styled.div`
 
     @media (max-width: 800px) {
         margin: 20px 0;
-    }
 
-    @media (max-height: 500px) {
         font-size: 1.2em;
     }
 `;

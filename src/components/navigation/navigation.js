@@ -17,7 +17,6 @@ const Container = styled.ul`
     width: 100%;
     height: 70px;
     margin: 0;
-    padding: 0 50px 0 0;
 
     color: white;
 
