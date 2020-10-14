@@ -19,7 +19,7 @@ const Container = styled.div`
     background-size: cover;
     background-attachment: fixed;
 
-    @media (max-width: 870px) {
+    @media (max-width: 870px) and (min-height: 400px) {
         flex-direction: column;
     }
 
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 
     background-color: rgb(0, 0, 0, 0.5);
 
-    @media (max-width: 800px) {
+    @media (max-width: 870px) {
         border-radius: 15px;
     }
 
@@ -51,7 +51,7 @@ const Wrapper = styled.div`
 
 const StyledLink = styled.a`
     z-index: 100;
-    @media (max-width: 800px) {
+    @media (max-width: 870px) {
         svg {
             height: 120px;
         }

@@ -17,7 +17,7 @@ const Title = styled.div`
 
     transition: opacity 1s;
 
-    @media (max-width: 800px) {
+    @media (max-width: 870px) {
         margin: 15px;
 
         font-size: 2em;
