@@ -65,7 +65,8 @@ const AboutBlock = ({ innerRef }) => (
             <Line>Опыт работы:</Line>
             <Line>Iceberg&nbsp;Sport&nbsp;Analytics (Junior&nbsp;frontend&nbsp;dev.) 2018г.</Line>
             <Line>Iceberg&nbsp;Sport&nbsp;Analytics (Lead&nbsp;frontend&nbsp;dev.) 2019&nbsp;-&nbsp;2020г.</Line>
-            <Line>З-п ожидания: 200т.р. на руки</Line>
+            <Line>Yandex&nbsp;Technology&nbsp;(Full&nbsp;stack&nbsp;dev.) 2020&nbsp;-&nbsp;2022г.</Line>
+            <Line>З-п ожидания: 350</Line>
         </Article>
     </Container>
 );

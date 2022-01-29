@@ -51,16 +51,11 @@ const LastBlock = ({ innerRef }) => (
     <Container ref={innerRef}>
         <Gradient color="#161616" height="100px" direction="top" />
         <Article>
-            <Line>Работаю на результат, люблю чистый код, code review, требователен к каждой мелочи в UI</Line>
-            <Line>
-                Изучаю backend, чтобы вырасти до full stack и иметь возможность брать небольшие задачи целиком.{' '}
-            </Line>
-            <Line>Языки программирования: JS, Java, семейство C</Line>
-            <Line>
-                Технологии: ES6, SPA, Ajax, REST API, Canvas, Svg, D3, React, Redux, Styled components, NPM, Maven, SQL,
-                MongoDB
-            </Line>
-            <Line>VCS: Git</Line>
+            <Line>Работаю на результат, люблю чистый код, code review, требователен к UI/UX</Line>
+            <Line>Интересуюсь backend и android разработкой, люблю задачи с высокими требованиями к математической базе</Line>
+            <Line>Основные зыки программирования: JS, Java, C</Line>
+            <Line>Опыт: Git, JS, TS, React, Redux, MobX, Java, Node, Express, Spring, SQL, Mongo, NPM, Maven, hbs</Line>
+            <Line>Имеется опыт проведения интервью, наставничества в небольшой команде, декомпозиции и распараллеливании задач</Line>
         </Article>
     </Container>
 );
