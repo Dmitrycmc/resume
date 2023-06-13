@@ -8,6 +8,7 @@ import IntroBlock from './intro-block/intro-block';
 import ExamplesBlock from './examples-block/examples-block';
 import HomeIcon from '../assets/icons/home';
 import LastBlock from './last-block/last-block';
+import localization from '../utils/localization';
 
 const scenario = {
     LOADING_DELAY: 500,
@@ -39,9 +40,9 @@ const Landing = () => {
                 scenario={scenario}
                 blocks={[
                     { ref: faceRef, title: <HomeIcon /> },
-                    { ref: aboutRef, title: 'О себе' },
-                    { ref: examplesRef, title: 'Примеры работ' },
-                    { ref: lastRef, title: 'Характеристика' }
+                    { ref: aboutRef, title: localization('menu-about') },
+                    { ref: examplesRef, title: localization('menu-examples') },
+                    { ref: lastRef, title: localization('menu-characteristics') }
                 ]}
             />
             <IntroBlock scenario={scenario} />

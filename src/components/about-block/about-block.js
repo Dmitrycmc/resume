@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import background2 from '../../assets/images/background2.jpg';
 import Gradient from '../gradient';
+import localization from '../../utils/localization';
 
 const Container = styled.div`
     position: relative;
@@ -55,18 +56,9 @@ const AboutBlock = ({ innerRef }) => (
     <Container ref={innerRef}>
         <Gradient color="#dedede" height="100px" direction="bottom" />
         <Article>
-            <Line>Имя: Дмитрий</Line>
-            <Line>Фамилия: Лытов</Line>
-            <Line>Отчество: Андреевич</Line>
-            <Line>Год рождения: 1995</Line>
-            <Line>Пол: мужской</Line>
-            <Line>Город: Москва</Line>
-            <Line>Образование: бакалавриат&nbsp;МГУ,&nbsp;ВМК (2018г)</Line>
-            <Line>Опыт работы:</Line>
-            <Line>Iceberg&nbsp;Sport&nbsp;Analytics (Junior&nbsp;frontend&nbsp;dev.) 2018г.</Line>
-            <Line>Iceberg&nbsp;Sport&nbsp;Analytics (Lead&nbsp;frontend&nbsp;dev.) 2019&nbsp;-&nbsp;2020г.</Line>
-            <Line>Yandex&nbsp;Technology&nbsp;(Full&nbsp;stack&nbsp;dev.) 2020&nbsp;-&nbsp;2022г.</Line>
-            <Line>З-п ожидания: 350</Line>
+            {localization('about-block-lines').map((line, i) => (
+                <Line key={i}>{line}</Line>
+            ))}
         </Article>
     </Container>
 );
