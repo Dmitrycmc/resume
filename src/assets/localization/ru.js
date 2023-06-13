@@ -1,7 +1,8 @@
 export default {
     'menu-about': 'О себе',
     'menu-examples': 'Примеры работ',
-    'menu-characteristics': 'Навыки',
+    'menu-skills': 'Навыки',
+    'face-lines': ['Fullstack', 'Web', 'Developer'],
     'about-block-lines': [
         'Имя: Дмитрий',
         'Фамилия: Лытов',

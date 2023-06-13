@@ -1,7 +1,8 @@
 export default {
     'menu-about': 'About',
     'menu-examples': 'Projects',
-    'menu-characteristics': 'Skills',
+    'menu-skills': 'Skills',
+    'face-lines': ['Fullstack', 'Web', 'Developer'],
     'about-block-lines': [
         'First name: Dmitrii',
         'Last name: Lytov',

@@ -42,7 +42,7 @@ const Landing = () => {
                     { ref: faceRef, title: <HomeIcon /> },
                     { ref: aboutRef, title: localization('menu-about') },
                     { ref: examplesRef, title: localization('menu-examples') },
-                    { ref: lastRef, title: localization('menu-characteristics') }
+                    { ref: lastRef, title: localization('menu-skills') }
                 ]}
             />
             <IntroBlock scenario={scenario} />

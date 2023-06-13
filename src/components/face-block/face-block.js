@@ -5,6 +5,8 @@ import Title from './title';
 import { getFadeInCss } from '../../helpers/keyframes';
 import Gradient from '../gradient';
 import TelegramIcon from '../../assets/icons/telegram';
+import localization from '../../utils/localization';
+import LinkedInIcon from '../../assets/icons/linkedIn';
 
 const Container = styled.div`
     display: flex;
@@ -69,12 +71,19 @@ const FaceBlock = ({ scenario, innerRef }) => (
         <Gradient color="black" height="500px" direction="top" />
         <Container>
             <Wrapper scenario={scenario}>
-                <Title order={1}>Senior</Title>
-                <Title order={2}>Frontend</Title>
-                <Title order={3}>Developer</Title>
+                {localization('face-lines').map((line, i) => (
+                    <Title order={i + 1}>{line}</Title>
+                ))}
             </Wrapper>
             <StyledLink href="https://telegram.me/Lytov" target="_blank" rel="noopener noreferrer">
                 <TelegramIcon />
+            </StyledLink>
+            <StyledLink
+                href="https://www.linkedin.com/in/dmitrii-lytov-ab823822a"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <LinkedInIcon />
             </StyledLink>
         </Container>
     </div>
