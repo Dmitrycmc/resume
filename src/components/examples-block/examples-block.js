@@ -11,6 +11,15 @@ import tableScreen from '../../assets/examples/flight-table/screen.png';
 import { source as tableSource, deploy as tableDeploy } from '../../assets/examples/flight-table/data';
 import trackerScreen from '../../assets/examples/work-tracker/screen.png';
 import { source as trackerSource, deploy as trackerDeploy } from '../../assets/examples/work-tracker/data';
+import smartHomeScreen from '../../assets/examples/smart-home/screen.png';
+import { source as smartHomeSource } from '../../assets/examples/smart-home/data';
+import cryptoWalletScreen from '../../assets/examples/crypto-wallet/screen.jpg';
+import { source as cryptoWalletSource } from '../../assets/examples/crypto-wallet/data';
+import gatewaysManagerScreen from '../../assets/examples/gateways-manager/screen.png';
+import {
+    source as gatewaysManagerSource,
+    deploy as gatewaysManagerDeploy
+} from '../../assets/examples/gateways-manager/data';
 import JsIcon from '../../assets/icons/js';
 import SvgIcon from '../../assets/icons/svg';
 import ReactIcon from '../../assets/icons/react';
@@ -18,6 +27,9 @@ import Link from './link';
 import MongoIcon from '../../assets/icons/mongodb';
 import AjaxIcon from '../../assets/icons/ajax';
 import CanvasIcon from '../../assets/icons/canvas';
+import AngularIcon from '../../assets/icons/angular';
+import NestIcon from '../../assets/icons/nest';
+import TsIcon from '../../assets/icons/ts';
 
 const examples = [
     {
@@ -31,6 +43,18 @@ const examples = [
         tools: (
             <>
                 <JsIcon style={{ margin: '0 10px' }} />
+                <SvgIcon style={{ margin: '0 10px' }} />
+            </>
+        ),
+        imageSrc: chartScreen,
+        deploy: chartDeploy,
+        source: chartSource,
+        caption: 'Chart'
+    },
+    {
+        tools: (
+            <>
+                <JsIcon style={{ margin: '0 10px' }} />
                 <AjaxIcon style={{ margin: '0 10px' }} />
             </>
         ),
@@ -38,6 +62,20 @@ const examples = [
         deploy: tableDeploy,
         source: tableSource,
         caption: 'Flight table'
+    },
+    {
+        tools: (
+            <>
+                <TsIcon style={{ margin: '0 10px' }} />
+                <AngularIcon style={{ margin: '0 10px' }} />
+                <NestIcon style={{ margin: '0 10px' }} />
+                <MongoIcon style={{ margin: '0 10px' }} />
+            </>
+        ),
+        imageSrc: gatewaysManagerScreen,
+        deploy: gatewaysManagerDeploy,
+        source: gatewaysManagerSource,
+        caption: 'Gateways'
     },
     {
         tools: <ReactIcon style={{ color: '#53C1DE', margin: '0 10px' }} />,
@@ -63,14 +101,19 @@ const examples = [
     {
         tools: (
             <>
-                <JsIcon style={{ margin: '0 10px' }} />
-                <SvgIcon style={{ margin: '0 10px' }} />
+                <TsIcon style={{ margin: '0 10px' }} />
+                <AngularIcon style={{ margin: '0 10px' }} />
             </>
         ),
-        imageSrc: chartScreen,
-        deploy: chartDeploy,
-        source: chartSource,
-        caption: 'Chart'
+        imageSrc: smartHomeScreen,
+        source: smartHomeSource,
+        caption: 'Smart Home'
+    },
+    {
+        tools: <></>,
+        imageSrc: cryptoWalletScreen,
+        source: cryptoWalletSource,
+        caption: 'Crypto Wallet'
     }
 ];
 

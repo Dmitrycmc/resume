@@ -9,8 +9,11 @@ import src6 from './assets/examples/resume/screen.png';
 import src7 from './assets/examples/chart/screen.png';
 import src8 from './assets/examples/flight-table/screen.png';
 import src9 from './assets/examples/work-tracker/screen.png';
+import src10 from './assets/examples/crypto-wallet/screen.jpg';
+import src11 from './assets/examples/gateways-manager/screen.png';
+import src12 from './assets/examples/smart-home/screen.png';
 
-const sources = [src1, src2, src3, src4, src5, src6, src7, src8, src9];
+const sources = [src1, src2, src3, src4, src5, src6, src7, src8, src9, src10, src11, src12];
 
 const Root = () => {
     const [remaining, setRemaining] = useState(sources.length);
